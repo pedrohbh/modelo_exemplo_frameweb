@@ -204,6 +204,28 @@
         </ownedEnd>
         <ownedEnd xsi:type="frameweb:DomainProperty" name="Target" type="//@compose.0/br.ufes.informatica.jurisproc.core.domain/TurmaRecursal" association="//@compose.0/br.ufes.informatica.jurisproc.core.domain/proferida%20pela"/>
       </packagedElement>
+      <packagedElement xsi:type="frameweb:DomainClass" name="Departamento">
+        <ownedAttribute xsi:type="frameweb:DomainAttribute" name="nome" visibility="private">
+          <type xsi:type="uml:Class" href="frameweb/Java.frameweb#//@compose.0/String"/>
+        </ownedAttribute>
+        <ownedAttribute xsi:type="frameweb:DomainAttribute" name="telefone" visibility="private">
+          <type xsi:type="uml:Class" href="frameweb/Java.frameweb#//@compose.0/String"/>
+        </ownedAttribute>
+        <ownedAttribute xsi:type="frameweb:DomainAttribute" name="descricao" visibility="private" isNull="true">
+          <type xsi:type="uml:Class" href="frameweb/Java.frameweb#//@compose.0/String"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xsi:type="frameweb:DomainClass" name="Funcionario">
+        <ownedAttribute xsi:type="frameweb:DomainAttribute" name="nome" visibility="private">
+          <type xsi:type="uml:Class" href="frameweb/Java.frameweb#//@compose.0/String"/>
+        </ownedAttribute>
+        <ownedAttribute xsi:type="frameweb:DomainAttribute" name="codigo" visibility="private">
+          <type xsi:type="uml:Class" href="frameweb/Java.frameweb#//@compose.0/String"/>
+        </ownedAttribute>
+        <ownedAttribute xsi:type="frameweb:DomainAttribute" name="idade" visibility="private">
+          <type xsi:type="uml:Class" href="frameweb/Java.frameweb#//@compose.0/Integer"/>
+        </ownedAttribute>
+      </packagedElement>
     </packagedElement>
   </compose>
   <compose xsi:type="frameweb:PersistenceModel" name="Persistence Model">
@@ -244,7 +266,7 @@
         <ownedAttribute xsi:type="frameweb:NavigationCompositionWhole"/>
         <ownedAttribute xsi:type="frameweb:NavigationCompositionWhole"/>
         <ownedAttribute xsi:type="frameweb:NavigationCompositionWhole" type="//@compose.2/core%2Flogin%2F/loginForm" association="//@compose.2/core%2Flogin%2F/@packagedElement.8"/>
-        <ownedAttribute xsi:type="frameweb:NavigationCompositionWhole" type="//@compose.2/core%2Flogin%2F/recupera_senha" association="//@compose.2/core%2Flogin%2F/@packagedElement.9"/>
+        <ownedAttribute xsi:type="frameweb:NavigationCompositionWhole" type="//@compose.2/core%2Flogin%2F/recupera_senha"/>
         <ownedAttribute xsi:type="frameweb:NavigationCompositionWhole" type="//@compose.2/core%2Fusuario/index"/>
       </packagedElement>
       <packagedElement xsi:type="frameweb:UIComponent" name="loginForm">
@@ -263,7 +285,7 @@
       </packagedElement>
       <packagedElement xsi:type="frameweb:Page" name="recupera_senha">
         <ownedAttribute xsi:type="frameweb:NavigationCompositionWhole"/>
-        <ownedAttribute xsi:type="frameweb:NavigationCompositionWhole" type="//@compose.2/core%2Flogin%2F/recuperaForm" association="//@compose.2/core%2Flogin%2F/@packagedElement.10"/>
+        <ownedAttribute xsi:type="frameweb:NavigationCompositionWhole" type="//@compose.2/core%2Flogin%2F/recuperaForm" association="//@compose.2/core%2Flogin%2F/@packagedElement.9"/>
       </packagedElement>
       <packagedElement xsi:type="frameweb:UIComponent" name="recuperaForm">
         <ownedAttribute xsi:type="frameweb:UIComponentField" name="usuario.email" visibility="private">
@@ -279,11 +301,8 @@
       <packagedElement xsi:type="frameweb:NavigationAssociation" memberEnd="//@compose.2/core%2Flogin%2F/@packagedElement.8/@ownedEnd.0 //@compose.2/core%2Flogin%2F/login/@ownedAttribute.4">
         <ownedEnd xsi:type="frameweb:NavigationCompositionPart" type="//@compose.2/core%2Flogin%2F/login" association="//@compose.2/core%2Flogin%2F/@packagedElement.8"/>
       </packagedElement>
-      <packagedElement xsi:type="frameweb:NavigationAssociation" memberEnd="//@compose.2/core%2Flogin%2F/@packagedElement.9/@ownedEnd.0 //@compose.2/core%2Flogin%2F/login/@ownedAttribute.5">
-        <ownedEnd xsi:type="frameweb:NavigationCompositionPart" type="//@compose.2/core%2Flogin%2F/login" association="//@compose.2/core%2Flogin%2F/@packagedElement.9"/>
-      </packagedElement>
-      <packagedElement xsi:type="frameweb:NavigationAssociation" memberEnd="//@compose.2/core%2Flogin%2F/@packagedElement.10/@ownedEnd.0 //@compose.2/core%2Flogin%2F/recupera_senha/@ownedAttribute.1">
-        <ownedEnd xsi:type="frameweb:NavigationCompositionPart" type="//@compose.2/core%2Flogin%2F/recupera_senha" association="//@compose.2/core%2Flogin%2F/@packagedElement.10"/>
+      <packagedElement xsi:type="frameweb:NavigationAssociation" memberEnd="//@compose.2/core%2Flogin%2F/@packagedElement.9/@ownedEnd.0 //@compose.2/core%2Flogin%2F/recupera_senha/@ownedAttribute.1">
+        <ownedEnd xsi:type="frameweb:NavigationCompositionPart" type="//@compose.2/core%2Flogin%2F/recupera_senha" association="//@compose.2/core%2Flogin%2F/@packagedElement.9"/>
       </packagedElement>
     </packagedElement>
     <packagedElement xsi:type="frameweb:ControllerPackage" name="br.ufes.informatica.jurisproc.core.controller">
@@ -326,6 +345,7 @@
           <methodType xsi:type="uml:Class" href="frameweb/Java.frameweb#//@compose.0/String"/>
         </ownedOperation>
       </packagedElement>
+      <packagedElement xsi:type="frameweb:FrontControllerClass" name="DepartamentoComponent"/>
     </packagedElement>
     <packagedElement xsi:type="frameweb:ResultDependency" client="//@compose.2/br.ufes.informatica.jurisproc.core.controller/LoginController" resultMethod="//@compose.2/br.ufes.informatica.jurisproc.core.controller/LoginController/fazLogin">
       <resultDependencyConstraint result="login.xhtml"/>
@@ -333,75 +353,6 @@
     <packagedElement xsi:type="frameweb:FrontControllerDependency" supplier="//@compose.2/br.ufes.informatica.jurisproc.core.controller/LoginController" method="//@compose.2/br.ufes.informatica.jurisproc.core.controller/LoginController/fazLogin"/>
     <packagedElement xsi:type="frameweb:ResultDependency" client="//@compose.2/br.ufes.informatica.jurisproc.core.controller/LoginController" resultMethod="//@compose.2/br.ufes.informatica.jurisproc.core.controller/LoginController/fazLogin">
       <resultDependencyConstraint result="index.xhtml"/>
-    </packagedElement>
-    <packagedElement xsi:type="frameweb:ViewPackage" name="core/peticao/">
-      <packagedElement xsi:type="frameweb:Page" name="index">
-        <ownedAttribute xsi:type="frameweb:NavigationCompositionWhole"/>
-        <ownedAttribute xsi:type="frameweb:NavigationCompositionWhole"/>
-        <ownedAttribute xsi:type="frameweb:NavigationCompositionWhole" type="//@compose.2/core%2Fpeticao%2F/cadastroForm" association="//@compose.2/core%2Fpeticao%2F/@packagedElement.4"/>
-      </packagedElement>
-      <packagedElement xsi:type="frameweb:UIComponent" name="cadastroForm">
-        <ownedAttribute xsi:type="frameweb:UIComponentField" name="anexoPedidoUniformizacao" visibility="private">
-          <type xsi:type="frameweb:Tag" href="frameweb/jbutler/NavigationModel_JButler_JSF_PrimeFaces.frameweb#//@configures.0/PrimeFaces/fileUpload"/>
-        </ownedAttribute>
-        <ownedAttribute xsi:type="frameweb:UIComponentField" name="pedido.numeroPeticao" visibility="private">
-          <type xsi:type="frameweb:Tag" href="frameweb/jbutler/NavigationModel_JButler_JSF_PrimeFaces.frameweb#//@configures.0/PrimeFaces/inputNumber"/>
-        </ownedAttribute>
-        <ownedAttribute xsi:type="frameweb:UIComponentField" name="pedido.numeroProcesso" visibility="private">
-          <type xsi:type="frameweb:Tag" href="frameweb/jbutler/NavigationModel_JButler_JSF_PrimeFaces.frameweb#//@configures.0/PrimeFaces/inputNumber"/>
-        </ownedAttribute>
-        <ownedAttribute xsi:type="frameweb:UIComponentField" name="pedido.paradigma" visibility="private">
-          <type xsi:type="frameweb:Tag" href="frameweb/jbutler/NavigationModel_JButler_JSF_PrimeFaces.frameweb#//@configures.0/PrimeFaces/inputNumber"/>
-        </ownedAttribute>
-        <ownedAttribute xsi:type="frameweb:UIComponentField" name="pedido.direitoMaterial" visibility="private">
-          <type xsi:type="frameweb:Tag" href="frameweb/jbutler/NavigationModel_JButler_JSF_PrimeFaces.frameweb#//@configures.0/PrimeFaces/checkbox"/>
-        </ownedAttribute>
-        <ownedAttribute xsi:type="frameweb:UIComponentField" name="pedido.copiaParadigma" visibility="private">
-          <type xsi:type="frameweb:Tag" href="frameweb/jbutler/NavigationModel_JButler_JSF_PrimeFaces.frameweb#//@configures.0/PrimeFaces/checkbox"/>
-        </ownedAttribute>
-        <ownedAttribute xsi:type="frameweb:UIComponentField" name="pedido.temaRecurso" visibility="private">
-          <type xsi:type="frameweb:Tag" href="frameweb/jbutler/NavigationModel_JButler_JSF_PrimeFaces.frameweb#//@configures.0/PrimeFaces/selectOneMenu"/>
-        </ownedAttribute>
-        <ownedAttribute xsi:type="frameweb:UIComponentField" name="pedido.parteAutor" visibility="private">
-          <type xsi:type="frameweb:Tag" href="frameweb/jbutler/NavigationModel_JButler_JSF_PrimeFaces.frameweb#//@configures.0/PrimeFaces/inputText"/>
-        </ownedAttribute>
-        <ownedAttribute xsi:type="frameweb:UIComponentField" name="pedido.parteReu" visibility="private">
-          <type xsi:type="frameweb:Tag" href="frameweb/jbutler/NavigationModel_JButler_JSF_PrimeFaces.frameweb#//@configures.0/PrimeFaces/inputText"/>
-        </ownedAttribute>
-        <ownedAttribute xsi:type="frameweb:UIComponentField" name="pedido.acordaoRetratacao" visibility="private">
-          <type xsi:type="frameweb:Tag" href="frameweb/jbutler/NavigationModel_JButler_JSF_PrimeFaces.frameweb#//@configures.0/PrimeFaces/selectOneMenu"/>
-        </ownedAttribute>
-        <ownedAttribute xsi:type="frameweb:UIComponentField" name="pedido.dataAcordao" visibility="private">
-          <type xsi:type="frameweb:Tag" href="frameweb/jbutler/NavigationModel_JButler_JSF_PrimeFaces.frameweb#//@configures.0/PrimeFaces/datePicker"/>
-        </ownedAttribute>
-        <ownedAttribute xsi:type="frameweb:UIComponentField" name="pedido.dataPeticao" visibility="private">
-          <type xsi:type="frameweb:Tag" href="frameweb/jbutler/NavigationModel_JButler_JSF_PrimeFaces.frameweb#//@configures.0/PrimeFaces/datePicker"/>
-        </ownedAttribute>
-        <ownedAttribute xsi:type="frameweb:UIComponentField" name="pedido.usuario.id" visibility="private">
-          <type xsi:type="frameweb:Tag" href="frameweb/jbutler/NavigationModel_JButler_JSF_PrimeFaces.frameweb#//@configures.0/JSF-HTML/inputHidden"/>
-        </ownedAttribute>
-        <ownedAttribute xsi:type="frameweb:UIComponentField" name="pedido.assunto" visibility="private">
-          <type xsi:type="frameweb:Tag" href="frameweb/jbutler/NavigationModel_JButler_JSF_PrimeFaces.frameweb#//@configures.0/PrimeFaces/selectManyMenu"/>
-        </ownedAttribute>
-        <ownedAttribute xsi:type="frameweb:UIComponentField" name="pedido.secaoJudiciaria" visibility="private">
-          <type xsi:type="frameweb:Tag" href="frameweb/jbutler/NavigationModel_JButler_JSF_PrimeFaces.frameweb#//@configures.0/PrimeFaces/selectOneMenu"/>
-        </ownedAttribute>
-      </packagedElement>
-      <packagedElement xsi:type="frameweb:NavigationAssociation">
-        <ownedEnd xsi:type="frameweb:NavigationCompositionPart"/>
-      </packagedElement>
-      <packagedElement xsi:type="frameweb:NavigationAssociation">
-        <ownedEnd xsi:type="frameweb:NavigationCompositionPart"/>
-      </packagedElement>
-      <packagedElement xsi:type="frameweb:NavigationAssociation" memberEnd="//@compose.2/core%2Fpeticao%2F/@packagedElement.4/@ownedEnd.0 //@compose.2/core%2Fpeticao%2F/index/@ownedAttribute.2">
-        <ownedEnd xsi:type="frameweb:NavigationCompositionPart" type="//@compose.2/core%2Fpeticao%2F/index" association="//@compose.2/core%2Fpeticao%2F/@packagedElement.4"/>
-      </packagedElement>
-      <packagedElement xsi:type="frameweb:Page" name="sucess">
-        <ownedAttribute xsi:type="frameweb:UIComponentField" name="pedido.numeroPeticao" visibility="private">
-          <type xsi:type="frameweb:Tag" href="frameweb/jbutler/NavigationModel_JButler_JSF_PrimeFaces.frameweb#//@configures.0/JSF-HTML/outputText"/>
-        </ownedAttribute>
-      </packagedElement>
-      <packagedElement xsi:type="frameweb:Page" name="error"/>
     </packagedElement>
     <packagedElement xsi:type="frameweb:FrontControllerDependency" supplier="//@compose.2/br.ufes.informatica.jurisproc.core.controller/PedidoUniformizacaoController" method="//@compose.2/br.ufes.informatica.jurisproc.core.controller/PedidoUniformizacaoController/cadastraPedidoUniformizacao"/>
     <packagedElement xsi:type="frameweb:ResultDependency" client="//@compose.2/br.ufes.informatica.jurisproc.core.controller/PedidoUniformizacaoController" resultMethod="//@compose.2/br.ufes.informatica.jurisproc.core.controller/PedidoUniformizacaoController/cadastraPedidoUniformizacao">
@@ -412,7 +363,7 @@
         <ownedAttribute xsi:type="frameweb:NavigationCompositionWhole"/>
         <ownedAttribute xsi:type="frameweb:NavigationCompositionWhole"/>
         <ownedAttribute xsi:type="frameweb:NavigationCompositionWhole" type="//@compose.2/core%2Flogin%2F/login"/>
-        <ownedAttribute xsi:type="frameweb:NavigationCompositionWhole" type="//@compose.2/core%2Fpeticao%2F/index"/>
+        <ownedAttribute xsi:type="frameweb:NavigationCompositionWhole"/>
       </packagedElement>
       <packagedElement xsi:type="frameweb:NavigationAssociation">
         <ownedEnd xsi:type="frameweb:NavigationCompositionPart"/>
@@ -460,22 +411,17 @@
       <packagedElement xsi:type="frameweb:NavigationAssociation" memberEnd="//@compose.2/core%2Fusuario/@packagedElement.2/@ownedEnd.0 //@compose.2/core%2Fusuario/index/@ownedAttribute.0">
         <ownedEnd xsi:type="frameweb:NavigationCompositionPart" type="//@compose.2/core%2Fusuario/index" association="//@compose.2/core%2Fusuario/@packagedElement.2"/>
       </packagedElement>
-      <packagedElement xsi:type="frameweb:Page" name="sucess">
-        <ownedAttribute xsi:type="frameweb:UIComponentField" name="usuario.nome" visibility="private">
-          <type xsi:type="frameweb:Tag" href="frameweb/jbutler/NavigationModel_JButler_JSF_PrimeFaces.frameweb#//@configures.0/JSF-HTML/outputText"/>
-        </ownedAttribute>
-        <ownedAttribute xsi:type="frameweb:UIComponentField" name="usuario.OAB" visibility="private">
-          <type xsi:type="frameweb:Tag" href="frameweb/jbutler/NavigationModel_JButler_JSF_PrimeFaces.frameweb#//@configures.0/JSF-HTML/outputText"/>
-        </ownedAttribute>
-      </packagedElement>
       <packagedElement xsi:type="frameweb:Page" name="emailinuse">
         <ownedAttribute xsi:type="frameweb:UIComponentField" name="usuario.email">
           <type xsi:type="frameweb:Tag" href="frameweb/jbutler/NavigationModel_JButler_JSF_PrimeFaces.frameweb#//@configures.0/JSF-HTML/outputText"/>
         </ownedAttribute>
       </packagedElement>
+      <packagedElement xsi:type="frameweb:Partial" name="New Partial"/>
+      <packagedElement xsi:type="frameweb:Partial" name="New Partial"/>
+      <packagedElement xsi:type="frameweb:UIComponent" name="New UI Component"/>
     </packagedElement>
     <packagedElement xsi:type="frameweb:FrontControllerDependency" client="//@compose.2/core%2Fusuario/cadastroForm" supplier="//@compose.2/br.ufes.informatica.jurisproc.core.controller/UsuarioController" method="//@compose.2/br.ufes.informatica.jurisproc.core.controller/UsuarioController/registrar"/>
-    <packagedElement xsi:type="frameweb:ResultDependency" client="//@compose.2/br.ufes.informatica.jurisproc.core.controller/UsuarioController" supplier="//@compose.2/core%2Fusuario/sucess" resultMethod="//@compose.2/br.ufes.informatica.jurisproc.core.controller/UsuarioController/registrar">
+    <packagedElement xsi:type="frameweb:ResultDependency" client="//@compose.2/br.ufes.informatica.jurisproc.core.controller/UsuarioController" resultMethod="//@compose.2/br.ufes.informatica.jurisproc.core.controller/UsuarioController/registrar">
       <resultDependencyConstraint result="sucess.xhtml"/>
     </packagedElement>
     <packagedElement xsi:type="frameweb:ResultDependency" client="//@compose.2/br.ufes.informatica.jurisproc.core.controller/UsuarioController" supplier="//@compose.2/core%2Fusuario/emailinuse" resultMethod="//@compose.2/br.ufes.informatica.jurisproc.core.controller/UsuarioController/registrar">
@@ -492,19 +438,114 @@
     <packagedElement xsi:type="frameweb:ResultDependency" client="//@compose.2/br.ufes.informatica.jurisproc.core.controller/LoginController" supplier="//@compose.2/core%2Flogin%2F/login" resultMethod="//@compose.2/br.ufes.informatica.jurisproc.core.controller/LoginController/processaRecuperarSenha">
       <resultDependencyConstraint result="login.xhtml"/>
     </packagedElement>
-    <packagedElement xsi:type="frameweb:FrontControllerDependency" client="//@compose.2/core%2Fpeticao%2F/cadastroForm" supplier="//@compose.2/br.ufes.informatica.jurisproc.core.controller/PedidoUniformizacaoController" method="//@compose.2/br.ufes.informatica.jurisproc.core.controller/PedidoUniformizacaoController/cadastraPedidoUniformizacao"/>
-    <packagedElement xsi:type="frameweb:ResultDependency" client="//@compose.2/br.ufes.informatica.jurisproc.core.controller/PedidoUniformizacaoController" supplier="//@compose.2/core%2Fpeticao%2F/sucess" resultMethod="//@compose.2/br.ufes.informatica.jurisproc.core.controller/PedidoUniformizacaoController/cadastraPedidoUniformizacao">
-      <resultDependencyConstraint result="sucess.xhtml"/>
-    </packagedElement>
-    <packagedElement xsi:type="frameweb:ResultDependency" client="//@compose.2/br.ufes.informatica.jurisproc.core.controller/PedidoUniformizacaoController" supplier="//@compose.2/core%2Fpeticao%2F/error" resultMethod="//@compose.2/br.ufes.informatica.jurisproc.core.controller/PedidoUniformizacaoController/cadastraPedidoUniformizacao">
+    <packagedElement xsi:type="frameweb:FrontControllerDependency" supplier="//@compose.2/br.ufes.informatica.jurisproc.core.controller/PedidoUniformizacaoController" method="//@compose.2/br.ufes.informatica.jurisproc.core.controller/PedidoUniformizacaoController/cadastraPedidoUniformizacao"/>
+    <packagedElement xsi:type="frameweb:ResultDependency" client="//@compose.2/br.ufes.informatica.jurisproc.core.controller/PedidoUniformizacaoController" resultMethod="//@compose.2/br.ufes.informatica.jurisproc.core.controller/PedidoUniformizacaoController/cadastraPedidoUniformizacao">
       <resultDependencyConstraint result="error.xhtml"/>
     </packagedElement>
     <packagedElement xsi:type="frameweb:PageDependency" client="//@compose.2/core%2Flogin%2F/login" supplier="//@compose.2/core%2Fusuario/index">
       <pageDependencyConstraint/>
     </packagedElement>
-    <packagedElement xsi:type="frameweb:PageDependency" client="//@compose.2/core%2F/index" supplier="//@compose.2/core%2Fpeticao%2F/index">
-      <pageDependencyConstraint/>
+    <packagedElement xsi:type="frameweb:ViewPackage" name="teste/departamento">
+      <packagedElement xsi:type="frameweb:Partial" name="departamento">
+        <ownedAttribute xsi:type="frameweb:NavigationAggregationWhole" type="//@compose.2/teste%2Fdepartamento/funcionario" association="//@compose.2/teste%2Fdepartamento/@packagedElement.2"/>
+        <ownedAttribute xsi:type="frameweb:NavigationCompositionWhole" type="//@compose.2/teste%2Fdepartamento/departamentoForm" association="//@compose.2/teste%2Fdepartamento/@packagedElement.4"/>
+        <ownedAttribute xsi:type="frameweb:NavigationCompositionWhole" type="//@compose.2/teste%2Fdepartamento/funcionario"/>
+        <ownedAttribute xsi:type="frameweb:UIComponentField" name="New UIComponentField"/>
+      </packagedElement>
+      <packagedElement xsi:type="frameweb:Partial" name="funcionario"/>
+      <packagedElement xsi:type="frameweb:NavigationAggregationAssociation" name="" memberEnd="//@compose.2/teste%2Fdepartamento/@packagedElement.2/@ownedEnd.0 //@compose.2/teste%2Fdepartamento/departamento/@ownedAttribute.0">
+        <ownedEnd xsi:type="frameweb:NavigationAggregationPart" type="//@compose.2/teste%2Fdepartamento/departamento" association="//@compose.2/teste%2Fdepartamento/@packagedElement.2"/>
+      </packagedElement>
+      <packagedElement xsi:type="frameweb:UIComponent" name="departamentoForm">
+        <ownedAttribute xsi:type="frameweb:UIComponentField" name="New UIComponentField"/>
+      </packagedElement>
+      <packagedElement xsi:type="frameweb:NavigationAssociation" memberEnd="//@compose.2/teste%2Fdepartamento/@packagedElement.4/@ownedEnd.0 //@compose.2/teste%2Fdepartamento/departamento/@ownedAttribute.1">
+        <ownedEnd xsi:type="frameweb:NavigationCompositionPart" type="//@compose.2/teste%2Fdepartamento/departamento" association="//@compose.2/teste%2Fdepartamento/@packagedElement.4"/>
+      </packagedElement>
     </packagedElement>
+    <packagedElement xsi:type="frameweb:FrontControllerDependency" client="//@compose.2/teste%2Fdepartamento/departamento" supplier="//@compose.2/br.ufes.informatica.jurisproc.core.controller/DepartamentoComponent"/>
+    <packagedElement xsi:type="frameweb:ResultDependency" client="//@compose.2/br.ufes.informatica.jurisproc.core.controller/DepartamentoComponent" supplier="//@compose.2/teste%2Fdepartamento/funcionario">
+      <resultDependencyConstraint result="null"/>
+    </packagedElement>
+    <packagedElement xsi:type="frameweb:ViewPackage" name="app/components/admin/menu">
+      <packagedElement xsi:type="frameweb:Partial" name="menu"/>
+    </packagedElement>
+    <packagedElement xsi:type="frameweb:ControllerPackage" name="app/components/admin/menu">
+      <packagedElement xsi:type="frameweb:FrontControllerClass" name="MenuComponent">
+        <ownedOperation xsi:type="frameweb:FrontControllerMethod" name="sair"/>
+      </packagedElement>
+    </packagedElement>
+    <packagedElement xsi:type="frameweb:FrontControllerDependency" client="//@compose.2/app%2Fcomponents%2Fadmin%2Fmenu/menu" supplier="//@compose.2/app%2Fcomponents%2Fadmin%2Fmenu.1/MenuComponent" method="//@compose.2/app%2Fcomponents%2Fadmin%2Fmenu.1/MenuComponent/sair"/>
+    <packagedElement xsi:type="frameweb:ViewPackage" name="app/compoents/admin/funcionario">
+      <packagedElement xsi:type="frameweb:Partial" name="funcionario">
+        <ownedAttribute xsi:type="frameweb:NavigationAggregationWhole" type="//@compose.2/app%2Fcomponents%2Fadmin%2Fmenu/menu" association="//@compose.2/app%2Fcompoents%2Fadmin%2Ffuncionario/@packagedElement.1"/>
+        <ownedAttribute xsi:type="frameweb:NavigationCompositionWhole" type="//@compose.2/app%2Fcompoents%2Fadmin%2Ffuncionario/funcionrioForm" association="//@compose.2/app%2Fcompoents%2Fadmin%2Ffuncionario/@packagedElement.3"/>
+      </packagedElement>
+      <packagedElement xsi:type="frameweb:NavigationAggregationAssociation" memberEnd="//@compose.2/app%2Fcompoents%2Fadmin%2Ffuncionario/@packagedElement.1/@ownedEnd.0 //@compose.2/app%2Fcompoents%2Fadmin%2Ffuncionario/funcionario/@ownedAttribute.0">
+        <ownedEnd xsi:type="frameweb:NavigationAggregationPart" type="//@compose.2/app%2Fcompoents%2Fadmin%2Ffuncionario/funcionario" association="//@compose.2/app%2Fcompoents%2Fadmin%2Ffuncionario/@packagedElement.1"/>
+      </packagedElement>
+      <packagedElement xsi:type="frameweb:UIComponent" name="funcionrioForm">
+        <ownedAttribute xsi:type="frameweb:UIComponentField" name="funionario.nome">
+          <type xsi:type="frameweb:Tag" href="frameweb/jbutler/NavigationModel_JButler_JSF_PrimeFaces.frameweb#//@configures.0/PrimeFaces/inputText"/>
+        </ownedAttribute>
+        <ownedAttribute xsi:type="frameweb:UIComponentField" name="funionario.codigo">
+          <type xsi:type="frameweb:Tag" href="frameweb/jbutler/NavigationModel_JButler_JSF_PrimeFaces.frameweb#//@configures.0/PrimeFaces/inputText"/>
+        </ownedAttribute>
+        <ownedAttribute xsi:type="frameweb:UIComponentField" name="funionario.idade">
+          <type xsi:type="frameweb:Tag" href="frameweb/jbutler/NavigationModel_JButler_JSF_PrimeFaces.frameweb#//@configures.0/PrimeFaces/inputText"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xsi:type="frameweb:NavigationAssociation" memberEnd="//@compose.2/app%2Fcompoents%2Fadmin%2Ffuncionario/@packagedElement.3/@ownedEnd.0 //@compose.2/app%2Fcompoents%2Fadmin%2Ffuncionario/funcionario/@ownedAttribute.1">
+        <ownedEnd xsi:type="frameweb:NavigationCompositionPart" type="//@compose.2/app%2Fcompoents%2Fadmin%2Ffuncionario/funcionario" association="//@compose.2/app%2Fcompoents%2Fadmin%2Ffuncionario/@packagedElement.3"/>
+      </packagedElement>
+    </packagedElement>
+    <packagedElement xsi:type="frameweb:ViewPackage" name="app/components/admin/departamento">
+      <packagedElement xsi:type="frameweb:Partial" name="departamento">
+        <ownedAttribute xsi:type="frameweb:NavigationAggregationWhole" type="//@compose.2/app%2Fcomponents%2Fadmin%2Fmenu/menu" association="//@compose.2/app%2Fcomponents%2Fadmin%2Fdepartamento/@packagedElement.1"/>
+        <ownedAttribute xsi:type="frameweb:NavigationCompositionWhole" type="//@compose.2/app%2Fcomponents%2Fadmin%2Fdepartamento/departamentoForm" association="//@compose.2/app%2Fcomponents%2Fadmin%2Fdepartamento/@packagedElement.3"/>
+      </packagedElement>
+      <packagedElement xsi:type="frameweb:NavigationAggregationAssociation" memberEnd="//@compose.2/app%2Fcomponents%2Fadmin%2Fdepartamento/@packagedElement.1/@ownedEnd.0 //@compose.2/app%2Fcomponents%2Fadmin%2Fdepartamento/departamento/@ownedAttribute.0">
+        <ownedEnd xsi:type="frameweb:NavigationAggregationPart" type="//@compose.2/app%2Fcomponents%2Fadmin%2Fdepartamento/departamento" association="//@compose.2/app%2Fcomponents%2Fadmin%2Fdepartamento/@packagedElement.1"/>
+      </packagedElement>
+      <packagedElement xsi:type="frameweb:UIComponent" name="departamentoForm">
+        <ownedAttribute xsi:type="frameweb:UIComponentField" name="departamento.nome">
+          <type xsi:type="frameweb:Tag" href="frameweb/jbutler/NavigationModel_JButler_JSF_PrimeFaces.frameweb#//@configures.0/PrimeFaces/inputText"/>
+        </ownedAttribute>
+        <ownedAttribute xsi:type="frameweb:UIComponentField" name="departamento.telefone">
+          <type xsi:type="frameweb:Tag" href="frameweb/jbutler/NavigationModel_JButler_JSF_PrimeFaces.frameweb#//@configures.0/PrimeFaces/inputMask"/>
+        </ownedAttribute>
+        <ownedAttribute xsi:type="frameweb:UIComponentField" name="departamento.descricao">
+          <type xsi:type="frameweb:Tag" href="frameweb/jbutler/NavigationModel_JButler_JSF_PrimeFaces.frameweb#//@configures.0/PrimeFaces/inputText"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xsi:type="frameweb:NavigationAssociation" memberEnd="//@compose.2/app%2Fcomponents%2Fadmin%2Fdepartamento/@packagedElement.3/@ownedEnd.0 //@compose.2/app%2Fcomponents%2Fadmin%2Fdepartamento/departamento/@ownedAttribute.1">
+        <ownedEnd xsi:type="frameweb:NavigationCompositionPart" type="//@compose.2/app%2Fcomponents%2Fadmin%2Fdepartamento/departamento" association="//@compose.2/app%2Fcomponents%2Fadmin%2Fdepartamento/@packagedElement.3"/>
+      </packagedElement>
+    </packagedElement>
+    <packagedElement xsi:type="frameweb:ResultDependency" client="//@compose.2/app%2Fcomponents%2Fadmin%2Fmenu/menu" supplier="//@compose.2/app%2Fcomponents%2Fadmin%2Fdepartamento/departamento">
+      <resultDependencyConstraint result=""/>
+    </packagedElement>
+    <packagedElement xsi:type="frameweb:ControllerPackage" name="app/components/admin/departamento">
+      <packagedElement xsi:type="frameweb:FrontControllerClass" name="DepartamentoComponent">
+        <ownedAttribute xsi:type="frameweb:IOParameter" name="departamento" visibility="private" type="//@compose.0/br.ufes.informatica.jurisproc.core.domain/Departamento"/>
+        <ownedOperation xsi:type="frameweb:FrontControllerMethod" name="save"/>
+        <ownedOperation xsi:type="frameweb:FrontControllerMethod" name="delete"/>
+      </packagedElement>
+    </packagedElement>
+    <packagedElement xsi:type="frameweb:FrontControllerDependency" client="//@compose.2/app%2Fcomponents%2Fadmin%2Fdepartamento/departamento" supplier="//@compose.2/app%2Fcomponents%2Fadmin%2Fdepartamento.1/DepartamentoComponent" method="//@compose.2/app%2Fcomponents%2Fadmin%2Fdepartamento.1/DepartamentoComponent/save"/>
+    <packagedElement xsi:type="frameweb:FrontControllerDependency" client="//@compose.2/app%2Fcomponents%2Fadmin%2Fdepartamento/departamento" supplier="//@compose.2/app%2Fcomponents%2Fadmin%2Fdepartamento.1/DepartamentoComponent" method="//@compose.2/app%2Fcomponents%2Fadmin%2Fdepartamento.1/DepartamentoComponent/delete"/>
+    <packagedElement xsi:type="frameweb:ResultDependency" client="//@compose.2/app%2Fcomponents%2Fadmin%2Fmenu/menu" supplier="//@compose.2/app%2Fcompoents%2Fadmin%2Ffuncionario/funcionario">
+      <resultDependencyConstraint result=""/>
+    </packagedElement>
+    <packagedElement xsi:type="frameweb:ControllerPackage" name="app/compoents/admin/funcionario">
+      <packagedElement xsi:type="frameweb:FrontControllerClass" name="FuncionarioComponent">
+        <ownedAttribute xsi:type="frameweb:IOParameter" name="funcionario" visibility="private" type="//@compose.0/br.ufes.informatica.jurisproc.core.domain/Funcionario"/>
+        <ownedOperation xsi:type="frameweb:FrontControllerMethod" name="save"/>
+        <ownedOperation xsi:type="frameweb:FrontControllerMethod" name="delete"/>
+      </packagedElement>
+    </packagedElement>
+    <packagedElement xsi:type="frameweb:FrontControllerDependency" client="//@compose.2/app%2Fcompoents%2Fadmin%2Ffuncionario/funcionrioForm" supplier="//@compose.2/app%2Fcompoents%2Fadmin%2Ffuncionario.1/FuncionarioComponent" method="//@compose.2/app%2Fcompoents%2Fadmin%2Ffuncionario.1/FuncionarioComponent/save"/>
+    <packagedElement xsi:type="frameweb:FrontControllerDependency" client="//@compose.2/app%2Fcompoents%2Fadmin%2Ffuncionario/funcionrioForm" supplier="//@compose.2/app%2Fcompoents%2Fadmin%2Ffuncionario.1/FuncionarioComponent" method="//@compose.2/app%2Fcompoents%2Fadmin%2Ffuncionario.1/FuncionarioComponent/delete"/>
   </compose>
   <compose xsi:type="frameweb:ApplicationModel" name="Application Model">
     <packagedElement xsi:type="frameweb:ApplicationPackage" name="br.ufes.informatica.jurisproc.core.application">
