@@ -527,6 +527,25 @@
     </packagedElement>
     <packagedElement xsi:type="frameweb:FrontControllerDependency" client="//@compose.2/app%2Fcompoents%2Fadmin%2Ffuncionario/funcionrioForm" supplier="//@compose.2/app%2Fcompoents%2Fadmin%2Ffuncionario.1/FuncionarioComponent" method="//@compose.2/app%2Fcompoents%2Fadmin%2Ffuncionario.1/FuncionarioComponent/save"/>
     <packagedElement xsi:type="frameweb:FrontControllerDependency" client="//@compose.2/app%2Fcompoents%2Fadmin%2Ffuncionario/funcionrioForm" supplier="//@compose.2/app%2Fcompoents%2Fadmin%2Ffuncionario.1/FuncionarioComponent" method="//@compose.2/app%2Fcompoents%2Fadmin%2Ffuncionario.1/FuncionarioComponent/delete"/>
+    <packagedElement xsi:type="frameweb:ViewPackage" name="components">
+      <packagedElement xsi:type="frameweb:Partial" name="app">
+        <ownedAttribute xsi:type="frameweb:NavigationAggregationWhole" type="//@compose.2/components%2Fheader/header" association="//@compose.2/components/@packagedElement.1"/>
+      </packagedElement>
+      <packagedElement xsi:type="frameweb:NavigationAggregationAssociation" memberEnd="//@compose.2/components/@packagedElement.1/@ownedEnd.0 //@compose.2/components/app/@ownedAttribute.0">
+        <ownedEnd xsi:type="frameweb:NavigationAggregationPart" type="//@compose.2/components/app" association="//@compose.2/components/@packagedElement.1"/>
+      </packagedElement>
+    </packagedElement>
+    <packagedElement xsi:type="frameweb:ControllerPackage" name="components">
+      <packagedElement xsi:type="frameweb:FrontControllerClass" name="AppComponent"/>
+    </packagedElement>
+    <packagedElement xsi:type="frameweb:FrontControllerDependency" client="//@compose.2/components/app" supplier="//@compose.2/components.1/AppComponent"/>
+    <packagedElement xsi:type="frameweb:ViewPackage" name="components/header">
+      <packagedElement xsi:type="frameweb:Partial" name="header"/>
+    </packagedElement>
+    <packagedElement xsi:type="frameweb:ControllerPackage" name="components/header">
+      <packagedElement xsi:type="frameweb:FrontControllerClass" name="HeaderComponent"/>
+    </packagedElement>
+    <packagedElement xsi:type="frameweb:FrontControllerDependency" client="//@compose.2/components%2Fheader/header" supplier="//@compose.2/components%2Fheader.1/HeaderComponent"/>
   </compose>
   <compose xsi:type="frameweb:ApplicationModel" name="Application Model">
     <packagedElement xsi:type="frameweb:ApplicationPackage" name="br.ufes.informatica.jurisproc.core.application">
