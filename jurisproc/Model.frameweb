@@ -226,6 +226,11 @@
           <type xsi:type="uml:Class" href="frameweb/Java.frameweb#//@compose.0/Integer"/>
         </ownedAttribute>
       </packagedElement>
+      <packagedElement xsi:type="frameweb:DomainClass" name="Nota">
+        <ownedAttribute xsi:type="frameweb:DomainAttribute" name="conteudo" visibility="private">
+          <type xsi:type="uml:Class" href="frameweb/Java.frameweb#//@compose.0/String"/>
+        </ownedAttribute>
+      </packagedElement>
     </packagedElement>
   </compose>
   <compose xsi:type="frameweb:PersistenceModel" name="Persistence Model">
@@ -574,6 +579,54 @@
       </packagedElement>
     </packagedElement>
     <packagedElement xsi:type="frameweb:FrontControllerDependency" client="//@compose.2/components%2FNovoUsuario.1/NovoUsuarioForm" supplier="//@compose.2/components%2FNovoUsuario/NovoUsuarioComponent" method="//@compose.2/components%2FNovoUsuario/NovoUsuarioComponent/salvarNovoUsuario"/>
+    <packagedElement xsi:type="frameweb:ViewPackage" name="components">
+      <packagedElement xsi:type="frameweb:Partial" name="painel">
+        <ownedAttribute xsi:type="frameweb:NavigationAggregationWhole" type="//@compose.2/components.2/nova_nota" association="//@compose.2/components.2/@packagedElement.2"/>
+        <ownedAttribute xsi:type="frameweb:NavigationAggregationWhole" type="//@compose.2/components.2/lista_notas" association="//@compose.2/components.2/@packagedElement.4"/>
+      </packagedElement>
+      <packagedElement xsi:type="frameweb:Partial" name="nova_nota">
+        <ownedAttribute xsi:type="frameweb:NavigationCompositionWhole" type="//@compose.2/components.2/novaNotaForm" association="//@compose.2/components.2/@packagedElement.10"/>
+      </packagedElement>
+      <packagedElement xsi:type="frameweb:NavigationAggregationAssociation" memberEnd="//@compose.2/components.2/@packagedElement.2/@ownedEnd.0 //@compose.2/components.2/painel/@ownedAttribute.0">
+        <ownedEnd xsi:type="frameweb:NavigationAggregationPart" type="//@compose.2/components.2/painel" association="//@compose.2/components.2/@packagedElement.2"/>
+      </packagedElement>
+      <packagedElement xsi:type="frameweb:Partial" name="lista_notas">
+        <ownedAttribute xsi:type="frameweb:NavigationAggregationWhole" type="//@compose.2/components.2/item_nota" association="//@compose.2/components.2/@packagedElement.6"/>
+      </packagedElement>
+      <packagedElement xsi:type="frameweb:NavigationAggregationAssociation" memberEnd="//@compose.2/components.2/@packagedElement.4/@ownedEnd.0 //@compose.2/components.2/painel/@ownedAttribute.1">
+        <ownedEnd xsi:type="frameweb:NavigationAggregationPart" type="//@compose.2/components.2/painel" association="//@compose.2/components.2/@packagedElement.4"/>
+      </packagedElement>
+      <packagedElement xsi:type="frameweb:Partial" name="item_nota">
+        <ownedAttribute xsi:type="frameweb:NavigationCompositionWhole" type="//@compose.2/components.2/itemNotaForm" association="//@compose.2/components.2/@packagedElement.8"/>
+      </packagedElement>
+      <packagedElement xsi:type="frameweb:NavigationAggregationAssociation" memberEnd="//@compose.2/components.2/@packagedElement.6/@ownedEnd.0 //@compose.2/components.2/lista_notas/@ownedAttribute.0">
+        <ownedEnd xsi:type="frameweb:NavigationAggregationPart" type="//@compose.2/components.2/lista_notas" association="//@compose.2/components.2/@packagedElement.6"/>
+      </packagedElement>
+      <packagedElement xsi:type="frameweb:UIComponent" name="itemNotaForm"/>
+      <packagedElement xsi:type="frameweb:NavigationAssociation" memberEnd="//@compose.2/components.2/@packagedElement.8/@ownedEnd.0 //@compose.2/components.2/item_nota/@ownedAttribute.0">
+        <ownedEnd xsi:type="frameweb:NavigationCompositionPart" type="//@compose.2/components.2/item_nota" association="//@compose.2/components.2/@packagedElement.8"/>
+      </packagedElement>
+      <packagedElement xsi:type="frameweb:UIComponent" name="novaNotaForm"/>
+      <packagedElement xsi:type="frameweb:NavigationAssociation" memberEnd="//@compose.2/components.2/@packagedElement.10/@ownedEnd.0 //@compose.2/components.2/nova_nota/@ownedAttribute.0">
+        <ownedEnd xsi:type="frameweb:NavigationCompositionPart" type="//@compose.2/components.2/nova_nota" association="//@compose.2/components.2/@packagedElement.10"/>
+      </packagedElement>
+    </packagedElement>
+    <packagedElement xsi:type="frameweb:ControllerPackage" name="components">
+      <packagedElement xsi:type="frameweb:FrontControllerClass" name="LvPainel">
+        <ownedOperation xsi:type="frameweb:FrontControllerMethod" name="sair"/>
+      </packagedElement>
+      <packagedElement xsi:type="frameweb:FrontControllerClass" name="LvNovaNota">
+        <ownedAttribute xsi:type="frameweb:IOParameter" name="estado" visibility="private">
+          <type xsi:type="uml:Class" href="frameweb/Java.frameweb#//@compose.0/String"/>
+        </ownedAttribute>
+        <ownedAttribute xsi:type="frameweb:IOParameter" name="conteudo" visibility="private">
+          <type xsi:type="uml:Class" href="frameweb/Java.frameweb#//@compose.0/String"/>
+        </ownedAttribute>
+        <ownedOperation xsi:type="frameweb:FrontControllerMethod" name="criar"/>
+      </packagedElement>
+    </packagedElement>
+    <packagedElement xsi:type="frameweb:FrontControllerDependency" client="//@compose.2/components.2/painel" supplier="//@compose.2/components.3/LvPainel" method="//@compose.2/components.3/LvPainel/sair"/>
+    <packagedElement xsi:type="frameweb:FrontControllerDependency" name="" client="//@compose.2/components.2/novaNotaForm" supplier="//@compose.2/components.3/LvNovaNota" method="//@compose.2/components.3/LvNovaNota/criar"/>
   </compose>
   <compose xsi:type="frameweb:ApplicationModel" name="Application Model">
     <packagedElement xsi:type="frameweb:ApplicationPackage" name="br.ufes.informatica.jurisproc.core.application">
