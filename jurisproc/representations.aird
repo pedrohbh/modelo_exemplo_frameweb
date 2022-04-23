@@ -8,6 +8,10 @@
     <semanticResources>frameweb/jbutler/EntityModel_JButler_JPA.frameweb</semanticResources>
     <semanticResources>frameweb/jbutler/NavigationModel_JButler_JSF_PrimeFaces.frameweb</semanticResources>
     <semanticResources>frameweb/jbutler/PersistenceModel_JButler.frameweb</semanticResources>
+    <semanticResources>frameweb/VueJS/ApplicationModel_JButler_CDI.frameweb</semanticResources>
+    <semanticResources>frameweb/VueJS/EntityModel_JButler_JPA.frameweb</semanticResources>
+    <semanticResources>frameweb/VueJS/NavigationModel_JButler_JSF_PrimeFaces.frameweb</semanticResources>
+    <semanticResources>frameweb/VueJS/PersistenceModel_JButler.frameweb</semanticResources>
     <ownedViews xmi:type="viewpoint:DView" uid="_vdAFQF00Eem7Q4kk1okOFA">
       <viewpoint xmi:type="description:Viewpoint" href="platform:/plugin/br.ufes.inf.nemo.FrameWeb_Martins2015.design/description/FrameWeb.odesign#//@ownedViewpoints[name='']"/>
       <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_zBpv0H-oEeuoqITK6ND7Bg" name="Jurisproc FrameWeb Project" repPath="#_y_9GsH-oEeuoqITK6ND7Bg" changeId="679aa87f-0f46-4e9e-bf31-eee4b872de00">
