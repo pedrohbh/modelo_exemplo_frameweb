@@ -1,8 +1,21 @@
 <template>
-    <fieldset style="width: 20%; margin-left: 40%">
-Exemplo
-        <slot />
-    </fieldset>
+   {%- set left = "{{" -%}
+   {%- set right = "}}" -%}
+   {% for form in forms %}
+        {%- for relationship in form.getSourceDirectedRelationships() -%}
+        	{%- for obj in relationship.getSuppliers() -%}
+        		{%- if obj.getPageTagLib is not defined -%}
+    			    {%- set controllerName = lower_first(obj.getName()) -%}
+        		{%- endif -%}
+        	{%- endfor -%}
+        {%- endfor -%}
+		{% for attribute in form.Attributes %}
+			{%- if attribute.Type.Name == "input[text]" -%}{%- set tag = 'input type="text"' -%}
+			{%- elseif attribute.Type.Name == "outputLink" -%}{%- set tag = "h:outputLink" -%}
+			{%- else -%}{%- set tag = "nao_definido" -%}{%- endif -%}
+			<{{ tag }} id="{{ attribute.Name }}" value="{{ left }} {{ attribute.Name }} {{ right }}" />
+		{% endfor %}
+    {% endfor %}
 </template>
 
 <script>
