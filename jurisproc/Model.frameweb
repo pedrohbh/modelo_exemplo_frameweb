@@ -454,10 +454,7 @@
     </packagedElement>
     <packagedElement xsi:type="frameweb:ViewPackage" name="app/components/admin/menu">
       <packagedElement xsi:type="frameweb:Partial" name="menu">
-        <ownedAttribute xsi:type="frameweb:NavigationAggregationWhole" type="//@compose.2/app%2Fcompoents%2Fadmin%2Ffuncionario/funcionario" association="//@compose.2/app%2Fcomponents%2Fadmin%2Fmenu/@packagedElement.1"/>
-      </packagedElement>
-      <packagedElement xsi:type="frameweb:NavigationAggregationAssociation" memberEnd="//@compose.2/app%2Fcomponents%2Fadmin%2Fmenu/@packagedElement.1/@ownedEnd.0 //@compose.2/app%2Fcomponents%2Fadmin%2Fmenu/menu/@ownedAttribute.0" upperBound="2">
-        <ownedEnd xsi:type="frameweb:NavigationAggregationPart" type="//@compose.2/app%2Fcomponents%2Fadmin%2Fmenu/menu" association="//@compose.2/app%2Fcomponents%2Fadmin%2Fmenu/@packagedElement.1"/>
+        <ownedAttribute xsi:type="frameweb:NavigationAggregationWhole" type="//@compose.2/app%2Fcompoents%2Fadmin%2Ffuncionario/funcionario"/>
       </packagedElement>
     </packagedElement>
     <packagedElement xsi:type="frameweb:ControllerPackage" name="app/components/admin/menu">
@@ -470,6 +467,7 @@
       <packagedElement xsi:type="frameweb:Partial" name="funcionario">
         <ownedAttribute xsi:type="frameweb:NavigationAggregationWhole" type="//@compose.2/app%2Fcomponents%2Fadmin%2Fmenu/menu"/>
         <ownedAttribute xsi:type="frameweb:NavigationCompositionWhole" type="//@compose.2/app%2Fcompoents%2Fadmin%2Ffuncionario/funcionrioForm" association="//@compose.2/app%2Fcompoents%2Fadmin%2Ffuncionario/@packagedElement.2"/>
+        <ownedAttribute xsi:type="frameweb:NavigationAggregationWhole" type="//@compose.2/app%2Fcomponents%2Fadmin%2Fmenu/menu" association="//@compose.2/app%2Fcompoents%2Fadmin%2Ffuncionario/@packagedElement.4"/>
       </packagedElement>
       <packagedElement xsi:type="frameweb:UIComponent" name="funcionrioForm">
         <ownedAttribute xsi:type="frameweb:UIComponentField" name="funionario.nome">
@@ -484,6 +482,10 @@
       </packagedElement>
       <packagedElement xsi:type="frameweb:NavigationAssociation" memberEnd="//@compose.2/app%2Fcompoents%2Fadmin%2Ffuncionario/@packagedElement.2/@ownedEnd.0 //@compose.2/app%2Fcompoents%2Fadmin%2Ffuncionario/funcionario/@ownedAttribute.1">
         <ownedEnd xsi:type="frameweb:NavigationCompositionPart" type="//@compose.2/app%2Fcompoents%2Fadmin%2Ffuncionario/funcionario" association="//@compose.2/app%2Fcompoents%2Fadmin%2Ffuncionario/@packagedElement.2"/>
+      </packagedElement>
+      <packagedElement xsi:type="frameweb:Partial" name="Joao"/>
+      <packagedElement xsi:type="frameweb:NavigationAggregationAssociation" memberEnd="//@compose.2/app%2Fcompoents%2Fadmin%2Ffuncionario/@packagedElement.4/@ownedEnd.0 //@compose.2/app%2Fcompoents%2Fadmin%2Ffuncionario/funcionario/@ownedAttribute.2">
+        <ownedEnd xsi:type="frameweb:NavigationAggregationPart" type="//@compose.2/app%2Fcompoents%2Fadmin%2Ffuncionario/funcionario" association="//@compose.2/app%2Fcompoents%2Fadmin%2Ffuncionario/@packagedElement.4"/>
       </packagedElement>
     </packagedElement>
     <packagedElement xsi:type="frameweb:ViewPackage" name="app/components/admin/departamento">
