@@ -1,6 +1,20 @@
 <template>
    {%- set left = "{{" -%}
    {%- set right = "}}" -%}
+	{#- Define os atributos. -#}
+	{%- for attribute in partial.getOwnedAttributes() -%}{%- if not empty(attribute.Name) -%}
+		{%- if attribute.Type.Name == "span" -%}{%- set tag = "span" -%}
+		{%- elseif attribute.Type.Name == "p" -%}{%- set tag = "p" -%}
+		{%- elseif attribute.Type.Name == "h1" -%}{%- set tag = "h1" -%}
+		{%- elseif attribute.Type.Name == "outputText" -%}{%- set tag = "h:outputText" -%}
+		{%- elseif attribute.Type.Name == "panelGroup" -%}{%- set tag = "h:panelGroup" -%}
+		{%- elseif attribute.Type.Name == "selectManyListbox" -%}{%- set tag = "h:selectManyListbox" -%}
+		{%- else -%}{%- set tag = "<p>" -%}{%- endif -%}
+		<{{ tag }} id="{{ attribute.Name }}">{{ left }} {{ attribute.Name }} {{ right }}</{{ tag }}>
+		
+	{%- endif -%}{%- endfor -%}
+
+{#- Define o formulário. -#}
    {% for form in forms %}
         {%- for relationship in form.getSourceDirectedRelationships() -%}
         	{%- for obj in relationship.getSuppliers() -%}
