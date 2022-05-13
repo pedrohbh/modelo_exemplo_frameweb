@@ -177,6 +177,9 @@
     </packagedElement>
     <packagedElement xsi:type="frameweb:TagLib" name="HTML" URI="http://java.sun.com/jsf/html" prefix="h">
       <packagedElement xsi:type="frameweb:Tag" name="input[text]"/>
+      <packagedElement xsi:type="frameweb:Tag" name="p"/>
+      <packagedElement xsi:type="frameweb:Tag" name="span"/>
+      <packagedElement xsi:type="frameweb:Tag" name="h1"/>
     </packagedElement>
   </configures>
 </frameweb:FramewebProject>
