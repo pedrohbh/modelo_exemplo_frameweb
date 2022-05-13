@@ -13,6 +13,7 @@
 			{%- if attribute.Type.Name == "input[text]" -%}{%- set tag = 'input type="text"' -%}
 			{%- elseif attribute.Type.Name == "outputLink" -%}{%- set tag = "h:outputLink" -%}
 			{%- else -%}{%- set tag = "nao_definido" -%}{%- endif -%}
+
 			<{{ tag }} id="{{ attribute.Name }}" value="{{ left }} {{ attribute.Name }} {{ right }}" />
 		{% endfor %}
     {% endfor %}
