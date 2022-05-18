@@ -453,9 +453,7 @@
       <resultDependencyConstraint result="null"/>
     </packagedElement>
     <packagedElement xsi:type="frameweb:ViewPackage" name="app/components/admin/menu">
-      <packagedElement xsi:type="frameweb:Partial" name="menu">
-        <ownedAttribute xsi:type="frameweb:NavigationAggregationWhole" type="//@compose.2/app%2Fcompoents%2Fadmin%2Ffuncionario/funcionario"/>
-      </packagedElement>
+      <packagedElement xsi:type="frameweb:Partial" name="menu"/>
     </packagedElement>
     <packagedElement xsi:type="frameweb:ControllerPackage" name="app/components/admin/menu">
       <packagedElement xsi:type="frameweb:FrontControllerClass" name="MenuComponent">
@@ -465,9 +463,8 @@
     <packagedElement xsi:type="frameweb:FrontControllerDependency" client="//@compose.2/app%2Fcomponents%2Fadmin%2Fmenu/menu" supplier="//@compose.2/app%2Fcomponents%2Fadmin%2Fmenu.1/MenuComponent" method="//@compose.2/app%2Fcomponents%2Fadmin%2Fmenu.1/MenuComponent/sair"/>
     <packagedElement xsi:type="frameweb:ViewPackage" name="app/compoents/admin/funcionario">
       <packagedElement xsi:type="frameweb:Partial" name="funcionario">
-        <ownedAttribute xsi:type="frameweb:NavigationAggregationWhole" type="//@compose.2/app%2Fcomponents%2Fadmin%2Fmenu/menu"/>
-        <ownedAttribute xsi:type="frameweb:NavigationCompositionWhole" type="//@compose.2/app%2Fcompoents%2Fadmin%2Ffuncionario/funcionrioForm" association="//@compose.2/app%2Fcompoents%2Fadmin%2Ffuncionario/@packagedElement.2"/>
-        <ownedAttribute xsi:type="frameweb:NavigationAggregationWhole" type="//@compose.2/app%2Fcomponents%2Fadmin%2Fmenu/menu" association="//@compose.2/app%2Fcompoents%2Fadmin%2Ffuncionario/@packagedElement.4"/>
+        <ownedAttribute xsi:type="frameweb:NavigationCompositionWhole" type="//@compose.2/app%2Fcompoents%2Fadmin%2Ffuncionario/funcionrioForm"/>
+        <ownedAttribute xsi:type="frameweb:NavigationAggregationSource" type="//@compose.2/app%2Fcomponents%2Fadmin%2Fmenu/menu"/>
       </packagedElement>
       <packagedElement xsi:type="frameweb:UIComponent" name="funcionrioForm">
         <ownedAttribute xsi:type="frameweb:UIComponentField" name="funionario.nome">
@@ -480,22 +477,30 @@
           <type xsi:type="frameweb:Tag" href="frameweb/jbutler/NavigationModel_JButler_JSF_PrimeFaces.frameweb#//@configures.0/PrimeFaces/inputText"/>
         </ownedAttribute>
       </packagedElement>
-      <packagedElement xsi:type="frameweb:NavigationAssociation" memberEnd="//@compose.2/app%2Fcompoents%2Fadmin%2Ffuncionario/@packagedElement.2/@ownedEnd.0 //@compose.2/app%2Fcompoents%2Fadmin%2Ffuncionario/funcionario/@ownedAttribute.1">
+      <packagedElement xsi:type="frameweb:NavigationAssociation" memberEnd="//@compose.2/app%2Fcompoents%2Fadmin%2Ffuncionario/@packagedElement.2/@ownedEnd.0">
         <ownedEnd xsi:type="frameweb:NavigationCompositionPart" type="//@compose.2/app%2Fcompoents%2Fadmin%2Ffuncionario/funcionario" association="//@compose.2/app%2Fcompoents%2Fadmin%2Ffuncionario/@packagedElement.2"/>
       </packagedElement>
-      <packagedElement xsi:type="frameweb:Partial" name="Joao"/>
-      <packagedElement xsi:type="frameweb:NavigationAggregationAssociation" memberEnd="//@compose.2/app%2Fcompoents%2Fadmin%2Ffuncionario/@packagedElement.4/@ownedEnd.0 //@compose.2/app%2Fcompoents%2Fadmin%2Ffuncionario/funcionario/@ownedAttribute.2">
-        <ownedEnd xsi:type="frameweb:NavigationAggregationPart" type="//@compose.2/app%2Fcompoents%2Fadmin%2Ffuncionario/funcionario" association="//@compose.2/app%2Fcompoents%2Fadmin%2Ffuncionario/@packagedElement.4"/>
+      <packagedElement xsi:type="frameweb:Partial" name="Joao">
+        <ownedAttribute xsi:type="frameweb:NavigationAggregationSource" type="//@compose.2/app%2Fcompoents%2Fadmin%2Ffuncionario/funcionario">
+          <upperValue xsi:type="uml:LiteralUnlimitedNatural" value="1"/>
+        </ownedAttribute>
+        <ownedAttribute xsi:type="frameweb:NavigationAggregationTarget" type="//@compose.2/app%2Fcompoents%2Fadmin%2Ffuncionario/funcionario" association="//@compose.2/app%2Fcompoents%2Fadmin%2Ffuncionario/@packagedElement.5">
+          <upperValue xsi:type="uml:LiteralUnlimitedNatural" value="1"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xsi:type="frameweb:NavigationAggregationAssociation"/>
+      <packagedElement xsi:type="frameweb:NavigationAggregationAssociation" memberEnd="//@compose.2/app%2Fcompoents%2Fadmin%2Ffuncionario/@packagedElement.5/@ownedEnd.0 //@compose.2/app%2Fcompoents%2Fadmin%2Ffuncionario/Joao/@ownedAttribute.1">
+        <ownedEnd xsi:type="frameweb:NavigationAggregationSource" type="//@compose.2/app%2Fcompoents%2Fadmin%2Ffuncionario/Joao" association="//@compose.2/app%2Fcompoents%2Fadmin%2Ffuncionario/@packagedElement.5">
+          <upperValue xsi:type="uml:LiteralUnlimitedNatural" value="1"/>
+        </ownedEnd>
       </packagedElement>
     </packagedElement>
     <packagedElement xsi:type="frameweb:ViewPackage" name="app/components/admin/departamento">
       <packagedElement xsi:type="frameweb:Partial" name="departamento">
-        <ownedAttribute xsi:type="frameweb:NavigationAggregationWhole" type="//@compose.2/app%2Fcomponents%2Fadmin%2Fmenu/menu" association="//@compose.2/app%2Fcomponents%2Fadmin%2Fdepartamento/@packagedElement.1"/>
-        <ownedAttribute xsi:type="frameweb:NavigationCompositionWhole" type="//@compose.2/app%2Fcomponents%2Fadmin%2Fdepartamento/departamentoForm" association="//@compose.2/app%2Fcomponents%2Fadmin%2Fdepartamento/@packagedElement.3"/>
+        <ownedAttribute xsi:type="frameweb:NavigationCompositionWhole" type="//@compose.2/app%2Fcomponents%2Fadmin%2Fdepartamento/departamentoForm" association="//@compose.2/app%2Fcomponents%2Fadmin%2Fdepartamento/@packagedElement.1"/>
+        <ownedAttribute xsi:type="frameweb:NavigationCompositionWhole" type="//@compose.2/app%2Fcomponents%2Fadmin%2Fdepartamento/departamentoForm" association="//@compose.2/app%2Fcomponents%2Fadmin%2Fdepartamento/@packagedElement.4"/>
       </packagedElement>
-      <packagedElement xsi:type="frameweb:NavigationAggregationAssociation" memberEnd="//@compose.2/app%2Fcomponents%2Fadmin%2Fdepartamento/@packagedElement.1/@ownedEnd.0 //@compose.2/app%2Fcomponents%2Fadmin%2Fdepartamento/departamento/@ownedAttribute.0" lowerBound="0">
-        <ownedEnd xsi:type="frameweb:NavigationAggregationPart" type="//@compose.2/app%2Fcomponents%2Fadmin%2Fdepartamento/departamento" association="//@compose.2/app%2Fcomponents%2Fadmin%2Fdepartamento/@packagedElement.1"/>
-      </packagedElement>
+      <packagedElement xsi:type="frameweb:NavigationAggregationAssociation" memberEnd="//@compose.2/app%2Fcomponents%2Fadmin%2Fdepartamento/departamento/@ownedAttribute.0"/>
       <packagedElement xsi:type="frameweb:UIComponent" name="departamentoForm">
         <ownedAttribute xsi:type="frameweb:UIComponentField" name="departamento.nome">
           <type xsi:type="frameweb:Tag" href="frameweb/jbutler/NavigationModel_JButler_JSF_PrimeFaces.frameweb#//@configures.0/PrimeFaces/inputText"/>
@@ -507,8 +512,11 @@
           <type xsi:type="frameweb:Tag" href="frameweb/jbutler/NavigationModel_JButler_JSF_PrimeFaces.frameweb#//@configures.0/PrimeFaces/inputText"/>
         </ownedAttribute>
       </packagedElement>
-      <packagedElement xsi:type="frameweb:NavigationAssociation" memberEnd="//@compose.2/app%2Fcomponents%2Fadmin%2Fdepartamento/@packagedElement.3/@ownedEnd.0 //@compose.2/app%2Fcomponents%2Fadmin%2Fdepartamento/departamento/@ownedAttribute.1">
+      <packagedElement xsi:type="frameweb:NavigationAssociation" memberEnd="//@compose.2/app%2Fcomponents%2Fadmin%2Fdepartamento/@packagedElement.3/@ownedEnd.0">
         <ownedEnd xsi:type="frameweb:NavigationCompositionPart" type="//@compose.2/app%2Fcomponents%2Fadmin%2Fdepartamento/departamento" association="//@compose.2/app%2Fcomponents%2Fadmin%2Fdepartamento/@packagedElement.3"/>
+      </packagedElement>
+      <packagedElement xsi:type="frameweb:NavigationAssociation" memberEnd="//@compose.2/app%2Fcomponents%2Fadmin%2Fdepartamento/@packagedElement.4/@ownedEnd.0 //@compose.2/app%2Fcomponents%2Fadmin%2Fdepartamento/departamento/@ownedAttribute.1">
+        <ownedEnd xsi:type="frameweb:NavigationCompositionPart" type="//@compose.2/app%2Fcomponents%2Fadmin%2Fdepartamento/departamento" association="//@compose.2/app%2Fcomponents%2Fadmin%2Fdepartamento/@packagedElement.4"/>
       </packagedElement>
     </packagedElement>
     <packagedElement xsi:type="frameweb:ResultDependency" client="//@compose.2/app%2Fcomponents%2Fadmin%2Fmenu/menu" supplier="//@compose.2/app%2Fcomponents%2Fadmin%2Fdepartamento/departamento">
@@ -537,22 +545,20 @@
     <packagedElement xsi:type="frameweb:FrontControllerDependency" client="//@compose.2/app%2Fcompoents%2Fadmin%2Ffuncionario/funcionrioForm" supplier="//@compose.2/app%2Fcompoents%2Fadmin%2Ffuncionario.1/FuncionarioComponent" method="//@compose.2/app%2Fcompoents%2Fadmin%2Ffuncionario.1/FuncionarioComponent/delete"/>
     <packagedElement xsi:type="frameweb:ViewPackage" name="components">
       <packagedElement xsi:type="frameweb:Partial" name="app">
-        <ownedAttribute xsi:type="frameweb:NavigationAggregationWhole" type="//@compose.2/components%2Fheader/header" association="//@compose.2/components/@packagedElement.1"/>
-        <ownedAttribute xsi:type="frameweb:NavigationAggregationWhole" type="//@compose.2/components%2FNovoUsuario.1/novo_usuario" association="//@compose.2/components/@packagedElement.2"/>
+        <ownedAttribute xsi:type="frameweb:NavigationAggregationSource" type="//@compose.2/components%2Fheader/header"/>
       </packagedElement>
-      <packagedElement xsi:type="frameweb:NavigationAggregationAssociation" memberEnd="//@compose.2/components/@packagedElement.1/@ownedEnd.0 //@compose.2/components/app/@ownedAttribute.0">
-        <ownedEnd xsi:type="frameweb:NavigationAggregationPart" type="//@compose.2/components/app" association="//@compose.2/components/@packagedElement.1"/>
-      </packagedElement>
-      <packagedElement xsi:type="frameweb:NavigationAggregationAssociation" memberEnd="//@compose.2/components/@packagedElement.2/@ownedEnd.0 //@compose.2/components/app/@ownedAttribute.1">
-        <ownedEnd xsi:type="frameweb:NavigationAggregationPart" type="//@compose.2/components/app" association="//@compose.2/components/@packagedElement.2"/>
-      </packagedElement>
+      <packagedElement xsi:type="frameweb:NavigationAggregationAssociation"/>
+      <packagedElement xsi:type="frameweb:NavigationAggregationAssociation"/>
     </packagedElement>
     <packagedElement xsi:type="frameweb:ControllerPackage" name="components">
       <packagedElement xsi:type="frameweb:FrontControllerClass" name="AppComponent"/>
     </packagedElement>
     <packagedElement xsi:type="frameweb:FrontControllerDependency" client="//@compose.2/components/app" supplier="//@compose.2/components.1/AppComponent"/>
     <packagedElement xsi:type="frameweb:ViewPackage" name="components/header">
-      <packagedElement xsi:type="frameweb:Partial" name="header"/>
+      <packagedElement xsi:type="frameweb:Partial" name="header">
+        <ownedAttribute xsi:type="frameweb:NavigationAggregationSource" type="//@compose.2/components%2FNovoUsuario.1/novo_usuario"/>
+        <ownedAttribute xsi:type="frameweb:NavigationAggregationSource" type="//@compose.2/components/app"/>
+      </packagedElement>
     </packagedElement>
     <packagedElement xsi:type="frameweb:ControllerPackage" name="components/header">
       <packagedElement xsi:type="frameweb:FrontControllerClass" name="HeaderComponent"/>
@@ -567,7 +573,7 @@
     <packagedElement xsi:type="frameweb:ViewPackage" name="components/NovoUsuario">
       <packagedElement xsi:type="frameweb:Partial" name="novo_usuario">
         <ownedAttribute xsi:type="frameweb:NavigationCompositionWhole" type="//@compose.2/components%2FNovoUsuario.1/NovoUsuarioForm" association="//@compose.2/components%2FNovoUsuario.1/@packagedElement.2"/>
-        <ownedAttribute xsi:type="frameweb:NavigationAggregationWhole" type="//@compose.2/components%2Fheader/header"/>
+        <ownedAttribute xsi:type="frameweb:NavigationAggregationSource" type="//@compose.2/components%2Fheader/header"/>
       </packagedElement>
       <packagedElement xsi:type="frameweb:UIComponent" name="NovoUsuarioForm">
         <ownedAttribute xsi:type="frameweb:UIComponentField" name="usuario.nome">
@@ -583,28 +589,20 @@
     </packagedElement>
     <packagedElement xsi:type="frameweb:FrontControllerDependency" client="//@compose.2/components%2FNovoUsuario.1/NovoUsuarioForm" supplier="//@compose.2/components%2FNovoUsuario/NovoUsuarioComponent" method="//@compose.2/components%2FNovoUsuario/NovoUsuarioComponent/salvarNovoUsuario"/>
     <packagedElement xsi:type="frameweb:ViewPackage" name="components">
-      <packagedElement xsi:type="frameweb:Partial" name="painel">
-        <ownedAttribute xsi:type="frameweb:NavigationAggregationWhole" type="//@compose.2/components.2/nova_nota" association="//@compose.2/components.2/@packagedElement.2"/>
-        <ownedAttribute xsi:type="frameweb:NavigationAggregationWhole" type="//@compose.2/components.2/lista_notas" association="//@compose.2/components.2/@packagedElement.4"/>
-      </packagedElement>
+      <packagedElement xsi:type="frameweb:Partial" name="painel"/>
       <packagedElement xsi:type="frameweb:Partial" name="nova_nota">
         <ownedAttribute xsi:type="frameweb:NavigationCompositionWhole" type="//@compose.2/components.2/novaNotaForm" association="//@compose.2/components.2/@packagedElement.10"/>
       </packagedElement>
-      <packagedElement xsi:type="frameweb:NavigationAggregationAssociation" memberEnd="//@compose.2/components.2/@packagedElement.2/@ownedEnd.0 //@compose.2/components.2/painel/@ownedAttribute.0">
-        <ownedEnd xsi:type="frameweb:NavigationAggregationPart" type="//@compose.2/components.2/painel" association="//@compose.2/components.2/@packagedElement.2"/>
-      </packagedElement>
-      <packagedElement xsi:type="frameweb:Partial" name="lista_notas">
-        <ownedAttribute xsi:type="frameweb:NavigationAggregationWhole" type="//@compose.2/components.2/item_nota" association="//@compose.2/components.2/@packagedElement.6"/>
-      </packagedElement>
-      <packagedElement xsi:type="frameweb:NavigationAggregationAssociation" memberEnd="//@compose.2/components.2/@packagedElement.4/@ownedEnd.0 //@compose.2/components.2/painel/@ownedAttribute.1">
-        <ownedEnd xsi:type="frameweb:NavigationAggregationPart" type="//@compose.2/components.2/painel" association="//@compose.2/components.2/@packagedElement.4"/>
-      </packagedElement>
+      <packagedElement xsi:type="frameweb:NavigationAggregationAssociation"/>
+      <packagedElement xsi:type="frameweb:Partial" name="lista_notas"/>
+      <packagedElement xsi:type="frameweb:NavigationAggregationAssociation"/>
       <packagedElement xsi:type="frameweb:Partial" name="item_nota">
         <ownedAttribute xsi:type="frameweb:NavigationCompositionWhole" type="//@compose.2/components.2/itemNotaForm" association="//@compose.2/components.2/@packagedElement.8"/>
+        <ownedAttribute xsi:type="frameweb:UIComponentField" name="nota.conteudo">
+          <type xsi:type="frameweb:Tag" href="frameweb/jbutler/NavigationModel_JButler_JSF_PrimeFaces.frameweb#//@configures.0/HTML/span"/>
+        </ownedAttribute>
       </packagedElement>
-      <packagedElement xsi:type="frameweb:NavigationAggregationAssociation" memberEnd="//@compose.2/components.2/@packagedElement.6/@ownedEnd.0 //@compose.2/components.2/lista_notas/@ownedAttribute.0">
-        <ownedEnd xsi:type="frameweb:NavigationAggregationPart" type="//@compose.2/components.2/lista_notas" association="//@compose.2/components.2/@packagedElement.6"/>
-      </packagedElement>
+      <packagedElement xsi:type="frameweb:NavigationAggregationAssociation"/>
       <packagedElement xsi:type="frameweb:UIComponent" name="itemNotaForm">
         <ownedAttribute xsi:type="frameweb:UIComponentField" name="nota.conteudo">
           <type xsi:type="frameweb:Tag" href="frameweb/jbutler/NavigationModel_JButler_JSF_PrimeFaces.frameweb#//@configures.0/HTML/input%5Btext%5D"/>
