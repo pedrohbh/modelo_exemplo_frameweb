@@ -598,7 +598,9 @@
       </packagedElement>
       <packagedElement xsi:type="frameweb:NavigationAggregationAssociation"/>
       <packagedElement xsi:type="frameweb:Partial" name="lista_notas">
-        <ownedAttribute xsi:type="frameweb:NavigationAggregationTarget" type="//@compose.2/components.2/item_nota" association="//@compose.2/components.2/@packagedElement.12"/>
+        <ownedAttribute xsi:type="frameweb:NavigationAggregationTarget" type="//@compose.2/components.2/item_nota" association="//@compose.2/components.2/@packagedElement.12">
+          <upperValue xsi:type="uml:LiteralUnlimitedNatural" value="*"/>
+        </ownedAttribute>
       </packagedElement>
       <packagedElement xsi:type="frameweb:NavigationAggregationAssociation"/>
       <packagedElement xsi:type="frameweb:Partial" name="item_nota">
