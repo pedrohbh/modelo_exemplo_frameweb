@@ -31,6 +31,11 @@
 			<{{ tag }} id="{{ attribute.Name }}" value="{{ left }} {{ attribute.Name }} {{ right }}" />
 		{% endfor %}
     {% endfor %}
+
+    {#- Define os partials referenciados. -#}
+    {%- for partialName in referencedPartials -%}
+    <{{ partialName }}/>
+    {%- endfor -%}
 </template>
 
 <script>
