@@ -41,6 +41,11 @@
 <script>
 export default {
     name: '{{ partialProperties.get("partialNameDash") }}',
-    props: ['titulo']
+    props: ['titulo'],
+	data: 
+	{
+		{% for attribute in partialProperties.get("FrontControllerClass").getAttributes() %}{{ attribute.Type.Name }} {{ attribute.Name }},
+		{% endfor %}
+	}
 }
 </script>
