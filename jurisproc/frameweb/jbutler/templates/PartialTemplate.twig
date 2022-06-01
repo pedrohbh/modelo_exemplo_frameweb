@@ -44,7 +44,15 @@ export default {
     props: ['titulo'],
 	data: 
 	{
-		{% for attribute in partialProperties.get("FrontControllerClass").getAttributes() %}{{ attribute.Type.Name }} {{ attribute.Name }},
+		{% for attribute in partialProperties.get("FrontControllerClass").getAttributes() %}{{ attribute.Type.Name }} {{ attribute.Name }},{% endfor %}
+	}
+	methods:
+	{
+		{% for method in partialProperties.get("methodsController") %}
+		{{ method.Name }}({% for parameter in method.OwnedParameters %}{{ parameter.Type.Name }} {{ parameter.Name }}{% if loop.last == false %}, {% endif %}{% endfor %}) 
+		{
+			return{% if method.MethodType is not null %} null{% endif %};
+		}{% if loop.last == false %}, {% endif %}
 		{% endfor %}
 	}
 }
