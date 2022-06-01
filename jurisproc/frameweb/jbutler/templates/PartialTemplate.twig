@@ -45,7 +45,7 @@ export default {
 	data: 
 	{
 		{% for attribute in partialProperties.get("FrontControllerClass").getAttributes() %}{{ attribute.Type.Name }} {{ attribute.Name }}{% if loop.last == false %}, {% endif %}{% endfor %}
-	}
+	},
 	methods:
 	{
 		{% for method in partialProperties.get("methodsController") %}
