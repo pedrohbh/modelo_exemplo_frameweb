@@ -12,6 +12,11 @@
 		{%- else -%}{%- set tag = "<p>" -%}{%- endif -%}
 		<{{ tag }} id="{{ attribute.Name }}">{{ left }} {{ attribute.Name }} {{ right }}</{{ tag }}>
 	{%- endif -%}{%- endfor -%}
+	{% if partialProperties.get("hasMethod") %}
+	{% for metodoInvocado in partialProperties.get("invocatedMethodsNames") %}
+	<button @click="{{metodoInvocado}}">{{metodoInvocado}}</button>
+	{% endfor %}
+	{% endif %}
 {#- Define o formulário. -#}
    {% for form in forms %}
         {%- for relationship in form.getSourceDirectedRelationships() -%}
