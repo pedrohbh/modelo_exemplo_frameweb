@@ -29,6 +29,11 @@
 			<{{ tag }} id="{{ attribute.Name }}" value="{{ left }} {{ attribute.Name }} {{ right }}" />
 		{% endfor %}
     {% endfor %}
+	{% if partialProperties.get("hasMethodForm") %}
+	{% for metodoInvocado in partialProperties.get("invocatedMethodsNames") %}
+	<input type="submit" :value="{{metodoInvocado}}" @click="{{metodoInvocado}}" />
+	{% endfor %}
+	{% endif %}
     {#- Define os partials referenciados. -#}
     {%- for partialName in partialProperties.get("referencedPartialsNameDash") -%}<{{ partialName }} />
 	{%- endfor -%}
