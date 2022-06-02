@@ -11,9 +11,7 @@
 		{%- elseif attribute.Type.Name == "selectManyListbox" -%}{%- set tag = "h:selectManyListbox" -%}
 		{%- else -%}{%- set tag = "<p>" -%}{%- endif -%}
 		<{{ tag }} id="{{ attribute.Name }}">{{ left }} {{ attribute.Name }} {{ right }}</{{ tag }}>
-		
 	{%- endif -%}{%- endfor -%}
-
 {#- Define o formulário. -#}
    {% for form in forms %}
         {%- for relationship in form.getSourceDirectedRelationships() -%}
@@ -31,11 +29,9 @@
 			<{{ tag }} id="{{ attribute.Name }}" value="{{ left }} {{ attribute.Name }} {{ right }}" />
 		{% endfor %}
     {% endfor %}
-
     {#- Define os partials referenciados. -#}
-    {%- for partialName in partialProperties.get("referencedPartialsNameDash") -%}
-    <{{ partialName }} />
-    {%- endfor -%}
+    {%- for partialName in partialProperties.get("referencedPartialsNameDash") -%}<{{ partialName }} />
+	{%- endfor -%}
 </template>
 
 <script>
@@ -44,7 +40,7 @@ export default {
     props: ['titulo'],
 	data: 
 	{
-		{% for attribute in partialProperties.get("FrontControllerClass").getAttributes() %}{{ attribute.Type.Name }} {{ attribute.Name }}{% if loop.last == false %}, {% endif %}{% endfor %}
+		{% for attribute in partialProperties.get("FrontControllerClass").getAttributes() %}{{ attribute.Name }} : {{ attribute.Type.Name }}{% if loop.last == false %}, {% endif %}{% endfor %}
 	},	
 	methods:
 	{		
