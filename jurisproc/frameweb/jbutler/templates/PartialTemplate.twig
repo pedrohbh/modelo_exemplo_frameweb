@@ -45,15 +45,16 @@ export default {
 	data: 
 	{
 		{% for attribute in partialProperties.get("FrontControllerClass").getAttributes() %}{{ attribute.Type.Name }} {{ attribute.Name }}{% if loop.last == false %}, {% endif %}{% endfor %}
-	},
+	},	
 	methods:
-	{
+	{		
 		{% for method in partialProperties.get("methodsController") %}
 		{{ method.Name }}({% for parameter in method.OwnedParameters %}{{ parameter.Type.Name }} {{ parameter.Name }}{% if loop.last == false %}, {% endif %}{% endfor %}) 
 		{
-			return{% if method.MethodType is not null %} null{% endif %};
+			//TODO To be implemented
 		}{% if loop.last == false %}, {% endif %}
 		{% endfor %}
 	}
+	
 }
 </script>
