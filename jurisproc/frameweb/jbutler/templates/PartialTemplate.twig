@@ -40,8 +40,19 @@
 	{% endfor %}
 	{% endif %}
     {#- Define os partials referenciados. -#}
-    {%- for partialName in partialProperties.get("referencedPartialsNameDash") -%}<{{ partialName }} />
+	{% for refPartial in referencedPartials %}
+	{% if refPartial.UpperBound == 1 %}
+	<{{ refPartial.NameDash }} />
+	{% elseif refPartial.UpperBound < 0 %}
+	<{{refPartial.NameDash}} v-for="(nota, ch) in notas" :key="ch" :nota="nota" />
+	{% else %}
+		{% for i in [1..refPartial.UpperBound] %}
+		<{{ refPartial.NameDash }} />
+		{% endfor %}
+	{% endif %}
+
 	{%- endfor -%}
+	{#- Fim de partials referenciados. -#}
 </template>
 
 <script>
