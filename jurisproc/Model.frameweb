@@ -579,7 +579,9 @@
     <packagedElement xsi:type="frameweb:FrontControllerDependency" client="//@compose.2/components%2FNovoUsuario.1/NovoUsuarioForm" supplier="//@compose.2/components%2FNovoUsuario/NovoUsuarioComponent" method="//@compose.2/components%2FNovoUsuario/NovoUsuarioComponent/salvarNovoUsuario"/>
     <packagedElement xsi:type="frameweb:ViewPackage" name="components">
       <packagedElement xsi:type="frameweb:Partial" name="painel">
-        <ownedAttribute xsi:type="frameweb:NavigationAggregationTarget" type="//@compose.2/components.2/nova_nota" association="//@compose.2/components.2/@packagedElement.10"/>
+        <ownedAttribute xsi:type="frameweb:NavigationAggregationTarget" type="//@compose.2/components.2/nova_nota" association="//@compose.2/components.2/@packagedElement.10">
+          <upperValue xsi:type="uml:LiteralUnlimitedNatural" value="1"/>
+        </ownedAttribute>
         <ownedAttribute xsi:type="frameweb:NavigationAggregationTarget" type="//@compose.2/components.2/lista_notas" association="//@compose.2/components.2/@packagedElement.11"/>
       </packagedElement>
       <packagedElement xsi:type="frameweb:Partial" name="nova_nota">

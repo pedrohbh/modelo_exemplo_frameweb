@@ -30,8 +30,7 @@
 			{%- if attribute.Type.Name == "input[text]" -%}{%- set tag = 'input type="text"' -%}
 			{%- elseif attribute.Type.Name == "outputLink" -%}{%- set tag = "h:outputLink" -%}
 			{%- else -%}{%- set tag = "nao_definido" -%}{%- endif -%}
-
-			<{{ tag }} id="{{ attribute.Name }}" value="{{ left }} {{ attribute.Name }} {{ right }}" />
+			<{{ tag }} id="{{ attribute.Name }}" v-model="{{ left }} {{ attribute.Name }} {{ right }}" />
 		{% endfor %}
     {% endfor %}
 	{% if partialProperties.get("hasMethodForm") %}
@@ -58,7 +57,6 @@
 <script>
 export default {
     name: '{{ partialProperties.get("partialNameDash") }}',
-    props: ['titulo'],
 	data: 
 	{
 		{% for attribute in partialProperties.get("FrontControllerClass").getAttributes() %}{{ attribute.Name }} : {{ attribute.Type.Name }}{% if loop.last == false %}, {% endif %}{% endfor %}
