@@ -49,7 +49,6 @@
 		<{{ refPartial.NameDash }} />
 		{% endfor %}
 	{% endif %}
-
 	{%- endfor -%}
 	{#- Fim de partials referenciados. -#}
 </template>
@@ -59,7 +58,10 @@ export default {
     name: '{{ partialProperties.get("partialNameDash") }}',
 	data: 
 	{
-		{% for attribute in partialProperties.get("FrontControllerClass").getAttributes() %}{{ attribute.Name }} : {{ attribute.Type.Name }}{% if loop.last == false %}, {% endif %}{% endfor %}
+		{% for attribute in partialProperties.get("FrontControllerClass").getAttributes() %}
+		{%- set atributoTipo = "\"\"" -%}
+		{#- attribute.Type.Name -#}
+		{{ attribute.Name }} : {{ atributoTipo }}{% if loop.last == false %}, {% endif %}{% endfor %}
 	},	
 	methods:
 	{		
