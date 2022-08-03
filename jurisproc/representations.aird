@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:diagram="http://www.eclipse.org/sirius/diagram/1.1.0" xmlns:frameweb="http://nemo.inf.ufes.br/projects/frameweb/FW-2015" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.3/notation" xmlns:style="http://www.eclipse.org/sirius/diagram/description/style/1.1.0" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmlns:viewpoint="http://www.eclipse.org/sirius/1.1.0" xsi:schemaLocation="http://www.eclipse.org/sirius/description/1.1.0 http://www.eclipse.org/sirius/1.1.0#//description http://www.eclipse.org/sirius/diagram/description/1.1.0 http://www.eclipse.org/sirius/diagram/1.1.0#//description http://www.eclipse.org/sirius/diagram/description/style/1.1.0 http://www.eclipse.org/sirius/diagram/1.1.0#//description/style">
-  <viewpoint:DAnalysis uid="_hQyeMF00Eem7Q4kk1okOFA" selectedViews="_vdAFQF00Eem7Q4kk1okOFA" version="14.6.0.202110251100">
+  <viewpoint:DAnalysis uid="_hQyeMF00Eem7Q4kk1okOFA" selectedViews="_vdAFQF00Eem7Q4kk1okOFA" version="15.0.0.202201261500">
     <semanticResources>Model.frameweb</semanticResources>
     <semanticResources>Configuration.frameweb</semanticResources>
     <semanticResources>frameweb/Java.frameweb</semanticResources>
@@ -45,7 +45,7 @@
       <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_o7wBUoBtEeuTeq2d20D-mA" name="Method Diagram" repPath="#_o7vaQIBtEeuTeq2d20D-mA" changeId="c486fcd5-ae28-40f5-b02c-7f1662fc2510">
         <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/br.ufes.inf.nemo.FrameWeb_Martins2015.design/description/FrameWeb.odesign#//@ownedViewpoints[name='']/@ownedRepresentations[name='Method%20Diagram']"/>
       </ownedRepresentationDescriptors>
-      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_LYRDYYBvEeuTeq2d20D-mA" name="FrameWebNavigationModel" repPath="#_LYPOMIBvEeuTeq2d20D-mA" changeId="34c83a93-e043-4093-b391-85ac8f59caf7">
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_LYRDYYBvEeuTeq2d20D-mA" name="FrameWebNavigationModel" repPath="#_LYPOMIBvEeuTeq2d20D-mA" changeId="fa084508-9863-4a2c-8162-886e3c550053">
         <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/br.ufes.inf.nemo.FrameWeb_Martins2015.design/description/FrameWeb.odesign#//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebNavigationModel']"/>
         <target xmi:type="frameweb:NavigationModel" href="Model.frameweb#//@compose.2"/>
       </ownedRepresentationDescriptors>
@@ -4370,9 +4370,9 @@
         <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/br.ufes.inf.nemo.FrameWeb_Martins2015.design/description/FrameWeb.odesign#//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebNavigationModel']/@defaultLayer/@containerMappings[name='Controller%20Package']/@style"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/br.ufes.inf.nemo.FrameWeb_Martins2015.design/description/FrameWeb.odesign#//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebNavigationModel']/@defaultLayer/@containerMappings[name='Controller%20Package']"/>
-      <ownedDiagramElements xmi:type="diagram:DNodeList" uid="_FhV8sLByEeywmqUdJewpCg" name="LvPainel" incomingEdges="_SoWPXLByEeywmqUdJewpCg">
-        <target xmi:type="frameweb:FrontControllerClass" href="Model.frameweb#//@compose.2/components.3/LvPainel"/>
-        <semanticElements xmi:type="frameweb:FrontControllerClass" href="Model.frameweb#//@compose.2/components.3/LvPainel"/>
+      <ownedDiagramElements xmi:type="diagram:DNodeList" uid="_FhV8sLByEeywmqUdJewpCg" name="lv-painel" incomingEdges="_SoWPXLByEeywmqUdJewpCg">
+        <target xmi:type="frameweb:FrontControllerClass" href="Model.frameweb#//@compose.2/components.3/lv-painel"/>
+        <semanticElements xmi:type="frameweb:FrontControllerClass" href="Model.frameweb#//@compose.2/components.3/lv-painel"/>
         <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
         <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
         <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
@@ -4382,91 +4382,91 @@
         </ownedStyle>
         <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/br.ufes.inf.nemo.FrameWeb_Martins2015.design/description/FrameWeb.odesign#//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebNavigationModel']/@defaultLayer/@containerMappings[name='Controller%20Package']/@subContainerMappings[name='Front%20Controller%20Node']"/>
         <ownedElements xmi:type="diagram:DNodeListElement" uid="_H6qkgLByEeywmqUdJewpCg" name=" + sair () : void">
-          <target xmi:type="frameweb:FrontControllerMethod" href="Model.frameweb#//@compose.2/components.3/LvPainel/sair"/>
-          <semanticElements xmi:type="frameweb:FrontControllerMethod" href="Model.frameweb#//@compose.2/components.3/LvPainel/sair"/>
+          <target xmi:type="frameweb:FrontControllerMethod" href="Model.frameweb#//@compose.2/components.3/lv-painel/sair"/>
+          <semanticElements xmi:type="frameweb:FrontControllerMethod" href="Model.frameweb#//@compose.2/components.3/lv-painel/sair"/>
           <ownedStyle xmi:type="diagram:Dot" uid="_H6rLkLByEeywmqUdJewpCg" showIcon="false" labelAlignment="LEFT" labelPosition="node">
             <description xmi:type="style:DotDescription" href="platform:/plugin/br.ufes.inf.nemo.FrameWeb_Martins2015.design/description/FrameWeb.odesign#//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebNavigationModel']/@defaultLayer/@containerMappings[name='Controller%20Package']/@subContainerMappings[name='Front%20Controller%20Node']/@subNodeMappings[name='Front%20Controller%20Method%20Node']/@style"/>
           </ownedStyle>
           <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/br.ufes.inf.nemo.FrameWeb_Martins2015.design/description/FrameWeb.odesign#//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebNavigationModel']/@defaultLayer/@containerMappings[name='Controller%20Package']/@subContainerMappings[name='Front%20Controller%20Node']/@subNodeMappings[name='Front%20Controller%20Method%20Node']"/>
         </ownedElements>
       </ownedDiagramElements>
-      <ownedDiagramElements xmi:type="diagram:DNodeList" uid="_i8U0ALByEeywmqUdJewpCg" name="LvNovaNota" incomingEdges="_8Ws8xLByEeywmqUdJewpCg">
-        <target xmi:type="frameweb:FrontControllerClass" href="Model.frameweb#//@compose.2/components.3/LvNovaNota"/>
-        <semanticElements xmi:type="frameweb:FrontControllerClass" href="Model.frameweb#//@compose.2/components.3/LvNovaNota"/>
+      <ownedDiagramElements xmi:type="diagram:DNodeList" uid="_i8U0ALByEeywmqUdJewpCg" name="lv-nova-nota" incomingEdges="_8Ws8xLByEeywmqUdJewpCg">
+        <target xmi:type="frameweb:FrontControllerClass" href="Model.frameweb#//@compose.2/components.3/lv-nova-nota"/>
+        <semanticElements xmi:type="frameweb:FrontControllerClass" href="Model.frameweb#//@compose.2/components.3/lv-nova-nota"/>
         <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_i8U0AbByEeywmqUdJewpCg" showIcon="false" iconPath="/br.ufes.inf.nemo.FrameWeb_Martins2015.design/icons/NavigationPackage.png" borderSize="1" borderSizeComputationExpression="1" foregroundColor="217,196,215">
           <labelFormat>bold</labelFormat>
           <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/br.ufes.inf.nemo.FrameWeb_Martins2015.design/description/FrameWeb.odesign#//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebNavigationModel']/@defaultLayer/@containerMappings[name='Controller%20Package']/@subContainerMappings[name='Front%20Controller%20Node']/@style"/>
         </ownedStyle>
         <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/br.ufes.inf.nemo.FrameWeb_Martins2015.design/description/FrameWeb.odesign#//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebNavigationModel']/@defaultLayer/@containerMappings[name='Controller%20Package']/@subContainerMappings[name='Front%20Controller%20Node']"/>
         <ownedElements xmi:type="diagram:DNodeListElement" uid="_moZdILByEeywmqUdJewpCg" name=" - estado : String">
-          <target xmi:type="frameweb:IOParameter" href="Model.frameweb#//@compose.2/components.3/LvNovaNota/estado"/>
-          <semanticElements xmi:type="frameweb:IOParameter" href="Model.frameweb#//@compose.2/components.3/LvNovaNota/estado"/>
+          <target xmi:type="frameweb:IOParameter" href="Model.frameweb#//@compose.2/components.3/lv-nova-nota/estado"/>
+          <semanticElements xmi:type="frameweb:IOParameter" href="Model.frameweb#//@compose.2/components.3/lv-nova-nota/estado"/>
           <ownedStyle xmi:type="diagram:Dot" uid="_moZdIbByEeywmqUdJewpCg" showIcon="false" labelAlignment="LEFT" labelPosition="node">
             <description xmi:type="style:DotDescription" href="platform:/plugin/br.ufes.inf.nemo.FrameWeb_Martins2015.design/description/FrameWeb.odesign#//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebNavigationModel']/@defaultLayer/@containerMappings[name='Controller%20Package']/@subContainerMappings[name='Front%20Controller%20Node']/@subNodeMappings[name='IO%20Parameter%20Node']/@style"/>
           </ownedStyle>
           <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/br.ufes.inf.nemo.FrameWeb_Martins2015.design/description/FrameWeb.odesign#//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebNavigationModel']/@defaultLayer/@containerMappings[name='Controller%20Package']/@subContainerMappings[name='Front%20Controller%20Node']/@subNodeMappings[name='IO%20Parameter%20Node']"/>
         </ownedElements>
         <ownedElements xmi:type="diagram:DNodeListElement" uid="_vlSfoLByEeywmqUdJewpCg" name=" - conteudo : String">
-          <target xmi:type="frameweb:IOParameter" href="Model.frameweb#//@compose.2/components.3/LvNovaNota/conteudo"/>
-          <semanticElements xmi:type="frameweb:IOParameter" href="Model.frameweb#//@compose.2/components.3/LvNovaNota/conteudo"/>
+          <target xmi:type="frameweb:IOParameter" href="Model.frameweb#//@compose.2/components.3/lv-nova-nota/conteudo"/>
+          <semanticElements xmi:type="frameweb:IOParameter" href="Model.frameweb#//@compose.2/components.3/lv-nova-nota/conteudo"/>
           <ownedStyle xmi:type="diagram:Dot" uid="_vlTGsLByEeywmqUdJewpCg" showIcon="false" labelAlignment="LEFT" labelPosition="node">
             <description xmi:type="style:DotDescription" href="platform:/plugin/br.ufes.inf.nemo.FrameWeb_Martins2015.design/description/FrameWeb.odesign#//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebNavigationModel']/@defaultLayer/@containerMappings[name='Controller%20Package']/@subContainerMappings[name='Front%20Controller%20Node']/@subNodeMappings[name='IO%20Parameter%20Node']/@style"/>
           </ownedStyle>
           <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/br.ufes.inf.nemo.FrameWeb_Martins2015.design/description/FrameWeb.odesign#//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebNavigationModel']/@defaultLayer/@containerMappings[name='Controller%20Package']/@subContainerMappings[name='Front%20Controller%20Node']/@subNodeMappings[name='IO%20Parameter%20Node']"/>
         </ownedElements>
         <ownedElements xmi:type="diagram:DNodeListElement" uid="_5ybCALByEeywmqUdJewpCg" name=" + criar () : void">
-          <target xmi:type="frameweb:FrontControllerMethod" href="Model.frameweb#//@compose.2/components.3/LvNovaNota/criar"/>
-          <semanticElements xmi:type="frameweb:FrontControllerMethod" href="Model.frameweb#//@compose.2/components.3/LvNovaNota/criar"/>
+          <target xmi:type="frameweb:FrontControllerMethod" href="Model.frameweb#//@compose.2/components.3/lv-nova-nota/criar"/>
+          <semanticElements xmi:type="frameweb:FrontControllerMethod" href="Model.frameweb#//@compose.2/components.3/lv-nova-nota/criar"/>
           <ownedStyle xmi:type="diagram:Dot" uid="_5ybCAbByEeywmqUdJewpCg" showIcon="false" labelAlignment="LEFT" labelPosition="node">
             <description xmi:type="style:DotDescription" href="platform:/plugin/br.ufes.inf.nemo.FrameWeb_Martins2015.design/description/FrameWeb.odesign#//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebNavigationModel']/@defaultLayer/@containerMappings[name='Controller%20Package']/@subContainerMappings[name='Front%20Controller%20Node']/@subNodeMappings[name='Front%20Controller%20Method%20Node']/@style"/>
           </ownedStyle>
           <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/br.ufes.inf.nemo.FrameWeb_Martins2015.design/description/FrameWeb.odesign#//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebNavigationModel']/@defaultLayer/@containerMappings[name='Controller%20Package']/@subContainerMappings[name='Front%20Controller%20Node']/@subNodeMappings[name='Front%20Controller%20Method%20Node']"/>
         </ownedElements>
       </ownedDiagramElements>
-      <ownedDiagramElements xmi:type="diagram:DNodeList" uid="_tsJ-ULBzEeywmqUdJewpCg" name="LvListaNotas" incomingEdges="_8sxd7LBzEeywmqUdJewpCg">
-        <target xmi:type="frameweb:FrontControllerClass" href="Model.frameweb#//@compose.2/components.3/LvListaNotas"/>
-        <semanticElements xmi:type="frameweb:FrontControllerClass" href="Model.frameweb#//@compose.2/components.3/LvListaNotas"/>
+      <ownedDiagramElements xmi:type="diagram:DNodeList" uid="_tsJ-ULBzEeywmqUdJewpCg" name="lv-lista-notas" incomingEdges="_8sxd7LBzEeywmqUdJewpCg">
+        <target xmi:type="frameweb:FrontControllerClass" href="Model.frameweb#//@compose.2/components.3/lv-lista-notas"/>
+        <semanticElements xmi:type="frameweb:FrontControllerClass" href="Model.frameweb#//@compose.2/components.3/lv-lista-notas"/>
         <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_tsJ-UbBzEeywmqUdJewpCg" showIcon="false" iconPath="/br.ufes.inf.nemo.FrameWeb_Martins2015.design/icons/NavigationPackage.png" borderSize="1" borderSizeComputationExpression="1" foregroundColor="217,196,215">
           <labelFormat>bold</labelFormat>
           <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/br.ufes.inf.nemo.FrameWeb_Martins2015.design/description/FrameWeb.odesign#//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebNavigationModel']/@defaultLayer/@containerMappings[name='Controller%20Package']/@subContainerMappings[name='Front%20Controller%20Node']/@style"/>
         </ownedStyle>
         <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/br.ufes.inf.nemo.FrameWeb_Martins2015.design/description/FrameWeb.odesign#//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebNavigationModel']/@defaultLayer/@containerMappings[name='Controller%20Package']/@subContainerMappings[name='Front%20Controller%20Node']"/>
         <ownedElements xmi:type="diagram:DNodeListElement" uid="_x0nogLBzEeywmqUdJewpCg" name=" - notas : List">
-          <target xmi:type="frameweb:IOParameter" href="Model.frameweb#//@compose.2/components.3/LvListaNotas/notas"/>
-          <semanticElements xmi:type="frameweb:IOParameter" href="Model.frameweb#//@compose.2/components.3/LvListaNotas/notas"/>
+          <target xmi:type="frameweb:IOParameter" href="Model.frameweb#//@compose.2/components.3/lv-lista-notas/notas"/>
+          <semanticElements xmi:type="frameweb:IOParameter" href="Model.frameweb#//@compose.2/components.3/lv-lista-notas/notas"/>
           <ownedStyle xmi:type="diagram:Dot" uid="_x0nogbBzEeywmqUdJewpCg" showIcon="false" labelAlignment="LEFT" labelPosition="node">
             <description xmi:type="style:DotDescription" href="platform:/plugin/br.ufes.inf.nemo.FrameWeb_Martins2015.design/description/FrameWeb.odesign#//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebNavigationModel']/@defaultLayer/@containerMappings[name='Controller%20Package']/@subContainerMappings[name='Front%20Controller%20Node']/@subNodeMappings[name='IO%20Parameter%20Node']/@style"/>
           </ownedStyle>
           <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/br.ufes.inf.nemo.FrameWeb_Martins2015.design/description/FrameWeb.odesign#//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebNavigationModel']/@defaultLayer/@containerMappings[name='Controller%20Package']/@subContainerMappings[name='Front%20Controller%20Node']/@subNodeMappings[name='IO%20Parameter%20Node']"/>
         </ownedElements>
         <ownedElements xmi:type="diagram:DNodeListElement" uid="_AHQnsLB0EeywmqUdJewpCg" name=" + atualizar () : void">
-          <target xmi:type="frameweb:FrontControllerMethod" href="Model.frameweb#//@compose.2/components.3/LvListaNotas/atualizar"/>
-          <semanticElements xmi:type="frameweb:FrontControllerMethod" href="Model.frameweb#//@compose.2/components.3/LvListaNotas/atualizar"/>
+          <target xmi:type="frameweb:FrontControllerMethod" href="Model.frameweb#//@compose.2/components.3/lv-lista-notas/atualizar"/>
+          <semanticElements xmi:type="frameweb:FrontControllerMethod" href="Model.frameweb#//@compose.2/components.3/lv-lista-notas/atualizar"/>
           <ownedStyle xmi:type="diagram:Dot" uid="_AHQnsbB0EeywmqUdJewpCg" showIcon="false" labelAlignment="LEFT" labelPosition="node">
             <description xmi:type="style:DotDescription" href="platform:/plugin/br.ufes.inf.nemo.FrameWeb_Martins2015.design/description/FrameWeb.odesign#//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebNavigationModel']/@defaultLayer/@containerMappings[name='Controller%20Package']/@subContainerMappings[name='Front%20Controller%20Node']/@subNodeMappings[name='Front%20Controller%20Method%20Node']/@style"/>
           </ownedStyle>
           <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/br.ufes.inf.nemo.FrameWeb_Martins2015.design/description/FrameWeb.odesign#//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebNavigationModel']/@defaultLayer/@containerMappings[name='Controller%20Package']/@subContainerMappings[name='Front%20Controller%20Node']/@subNodeMappings[name='Front%20Controller%20Method%20Node']"/>
         </ownedElements>
       </ownedDiagramElements>
-      <ownedDiagramElements xmi:type="diagram:DNodeList" uid="_GR4W4LB0EeywmqUdJewpCg" name="LvItemNota" incomingEdges="_jm0baNbmEeyq7PoK1JoAaw">
-        <target xmi:type="frameweb:FrontControllerClass" href="Model.frameweb#//@compose.2/components.3/LvItemNota"/>
-        <semanticElements xmi:type="frameweb:FrontControllerClass" href="Model.frameweb#//@compose.2/components.3/LvItemNota"/>
+      <ownedDiagramElements xmi:type="diagram:DNodeList" uid="_GR4W4LB0EeywmqUdJewpCg" name="lv-item-nota" incomingEdges="_jm0baNbmEeyq7PoK1JoAaw">
+        <target xmi:type="frameweb:FrontControllerClass" href="Model.frameweb#//@compose.2/components.3/lv-item-nota"/>
+        <semanticElements xmi:type="frameweb:FrontControllerClass" href="Model.frameweb#//@compose.2/components.3/lv-item-nota"/>
         <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_GR4W4bB0EeywmqUdJewpCg" showIcon="false" iconPath="/br.ufes.inf.nemo.FrameWeb_Martins2015.design/icons/NavigationPackage.png" borderSize="1" borderSizeComputationExpression="1" foregroundColor="217,196,215">
           <labelFormat>bold</labelFormat>
           <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/br.ufes.inf.nemo.FrameWeb_Martins2015.design/description/FrameWeb.odesign#//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebNavigationModel']/@defaultLayer/@containerMappings[name='Controller%20Package']/@subContainerMappings[name='Front%20Controller%20Node']/@style"/>
         </ownedStyle>
         <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/br.ufes.inf.nemo.FrameWeb_Martins2015.design/description/FrameWeb.odesign#//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebNavigationModel']/@defaultLayer/@containerMappings[name='Controller%20Package']/@subContainerMappings[name='Front%20Controller%20Node']"/>
         <ownedElements xmi:type="diagram:DNodeListElement" uid="_WAwDgLB0EeywmqUdJewpCg" name=" - nota : Nota">
-          <target xmi:type="frameweb:IOParameter" href="Model.frameweb#//@compose.2/components.3/LvItemNota/nota"/>
-          <semanticElements xmi:type="frameweb:IOParameter" href="Model.frameweb#//@compose.2/components.3/LvItemNota/nota"/>
+          <target xmi:type="frameweb:IOParameter" href="Model.frameweb#//@compose.2/components.3/lv-item-nota/nota"/>
+          <semanticElements xmi:type="frameweb:IOParameter" href="Model.frameweb#//@compose.2/components.3/lv-item-nota/nota"/>
           <ownedStyle xmi:type="diagram:Dot" uid="_WAwDgbB0EeywmqUdJewpCg" showIcon="false" labelAlignment="LEFT" labelPosition="node">
             <description xmi:type="style:DotDescription" href="platform:/plugin/br.ufes.inf.nemo.FrameWeb_Martins2015.design/description/FrameWeb.odesign#//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebNavigationModel']/@defaultLayer/@containerMappings[name='Controller%20Package']/@subContainerMappings[name='Front%20Controller%20Node']/@subNodeMappings[name='IO%20Parameter%20Node']/@style"/>
           </ownedStyle>
           <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/br.ufes.inf.nemo.FrameWeb_Martins2015.design/description/FrameWeb.odesign#//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebNavigationModel']/@defaultLayer/@containerMappings[name='Controller%20Package']/@subContainerMappings[name='Front%20Controller%20Node']/@subNodeMappings[name='IO%20Parameter%20Node']"/>
         </ownedElements>
         <ownedElements xmi:type="diagram:DNodeListElement" uid="_bw9HkLB0EeywmqUdJewpCg" name=" + apagar () : void">
-          <target xmi:type="frameweb:FrontControllerMethod" href="Model.frameweb#//@compose.2/components.3/LvItemNota/apagar"/>
-          <semanticElements xmi:type="frameweb:FrontControllerMethod" href="Model.frameweb#//@compose.2/components.3/LvItemNota/apagar"/>
+          <target xmi:type="frameweb:FrontControllerMethod" href="Model.frameweb#//@compose.2/components.3/lv-item-nota/apagar"/>
+          <semanticElements xmi:type="frameweb:FrontControllerMethod" href="Model.frameweb#//@compose.2/components.3/lv-item-nota/apagar"/>
           <ownedStyle xmi:type="diagram:Dot" uid="_bw9HkbB0EeywmqUdJewpCg" showIcon="false" labelAlignment="LEFT" labelPosition="node">
             <description xmi:type="style:DotDescription" href="platform:/plugin/br.ufes.inf.nemo.FrameWeb_Martins2015.design/description/FrameWeb.odesign#//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebNavigationModel']/@defaultLayer/@containerMappings[name='Controller%20Package']/@subContainerMappings[name='Front%20Controller%20Node']/@subNodeMappings[name='Front%20Controller%20Method%20Node']/@style"/>
           </ownedStyle>

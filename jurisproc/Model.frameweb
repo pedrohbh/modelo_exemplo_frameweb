@@ -623,10 +623,10 @@
       </packagedElement>
     </packagedElement>
     <packagedElement xsi:type="frameweb:ControllerPackage" name="components">
-      <packagedElement xsi:type="frameweb:FrontControllerClass" name="LvPainel">
+      <packagedElement xsi:type="frameweb:FrontControllerClass" name="lv-painel">
         <ownedOperation xsi:type="frameweb:FrontControllerMethod" name="sair"/>
       </packagedElement>
-      <packagedElement xsi:type="frameweb:FrontControllerClass" name="LvNovaNota">
+      <packagedElement xsi:type="frameweb:FrontControllerClass" name="lv-nova-nota">
         <ownedAttribute xsi:type="frameweb:IOParameter" name="estado" visibility="private">
           <type xsi:type="uml:Class" href="frameweb/Java.frameweb#//@compose.0/String"/>
         </ownedAttribute>
@@ -635,22 +635,22 @@
         </ownedAttribute>
         <ownedOperation xsi:type="frameweb:FrontControllerMethod" name="criar"/>
       </packagedElement>
-      <packagedElement xsi:type="frameweb:FrontControllerClass" name="LvListaNotas">
+      <packagedElement xsi:type="frameweb:FrontControllerClass" name="lv-lista-notas">
         <ownedAttribute xsi:type="frameweb:IOParameter" name="notas" visibility="private">
           <type xsi:type="uml:Class" href="frameweb/Java.frameweb#//@compose.0/List"/>
         </ownedAttribute>
         <ownedOperation xsi:type="frameweb:FrontControllerMethod" name="atualizar"/>
       </packagedElement>
-      <packagedElement xsi:type="frameweb:FrontControllerClass" name="LvItemNota">
+      <packagedElement xsi:type="frameweb:FrontControllerClass" name="lv-item-nota">
         <ownedAttribute xsi:type="frameweb:IOParameter" name="nota" visibility="private" type="//@compose.0/br.ufes.informatica.jurisproc.core.domain/Nota"/>
         <ownedOperation xsi:type="frameweb:FrontControllerMethod" name="apagar"/>
       </packagedElement>
     </packagedElement>
-    <packagedElement xsi:type="frameweb:FrontControllerDependency" client="//@compose.2/components.2/painel" supplier="//@compose.2/components.3/LvPainel" method="//@compose.2/components.3/LvPainel/sair"/>
-    <packagedElement xsi:type="frameweb:FrontControllerDependency" name="" client="//@compose.2/components.2/novaNotaForm" supplier="//@compose.2/components.3/LvNovaNota" method="//@compose.2/components.3/LvNovaNota/criar"/>
-    <packagedElement xsi:type="frameweb:FrontControllerDependency" name="" client="//@compose.2/components.2/lista_notas" supplier="//@compose.2/components.3/LvListaNotas" method="//@compose.2/components.3/LvListaNotas/atualizar"/>
-    <packagedElement xsi:type="frameweb:FrontControllerDependency" supplier="//@compose.2/components.3/LvItemNota" method="//@compose.2/components.3/LvItemNota/apagar"/>
-    <packagedElement xsi:type="frameweb:FrontControllerDependency" client="//@compose.2/components.2/item_nota" supplier="//@compose.2/components.3/LvItemNota" method="//@compose.2/components.3/LvItemNota/apagar"/>
+    <packagedElement xsi:type="frameweb:FrontControllerDependency" client="//@compose.2/components.2/painel" supplier="//@compose.2/components.3/lv-painel" method="//@compose.2/components.3/lv-painel/sair"/>
+    <packagedElement xsi:type="frameweb:FrontControllerDependency" name="" client="//@compose.2/components.2/novaNotaForm" supplier="//@compose.2/components.3/lv-nova-nota" method="//@compose.2/components.3/lv-nova-nota/criar"/>
+    <packagedElement xsi:type="frameweb:FrontControllerDependency" name="" client="//@compose.2/components.2/lista_notas" supplier="//@compose.2/components.3/lv-lista-notas" method="//@compose.2/components.3/lv-lista-notas/atualizar"/>
+    <packagedElement xsi:type="frameweb:FrontControllerDependency" supplier="//@compose.2/components.3/lv-item-nota" method="//@compose.2/components.3/lv-item-nota/apagar"/>
+    <packagedElement xsi:type="frameweb:FrontControllerDependency" client="//@compose.2/components.2/item_nota" supplier="//@compose.2/components.3/lv-item-nota" method="//@compose.2/components.3/lv-item-nota/apagar"/>
     <packagedElement xsi:type="frameweb:FrontControllerDependency" client="//@compose.2/app%2Fcomponents%2Fadmin%2Fdepartamento/departamentoForm" supplier="//@compose.2/app%2Fcomponents%2Fadmin%2Fdepartamento.1/DepartamentoComponent" method="//@compose.2/app%2Fcomponents%2Fadmin%2Fdepartamento.1/DepartamentoComponent/delete2"/>
   </compose>
   <compose xsi:type="frameweb:ApplicationModel" name="Application Model">
