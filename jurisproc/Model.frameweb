@@ -535,9 +535,17 @@
     <packagedElement xsi:type="frameweb:ViewPackage" name="components">
       <packagedElement xsi:type="frameweb:Partial" name="app">
         <ownedAttribute xsi:type="frameweb:NavigationAggregationSource" type="//@compose.2/components%2Fheader/header"/>
+        <ownedAttribute xsi:type="frameweb:NavigationAggregationTarget" type="//@compose.2/components%2Fheader/header" association="//@compose.2/components/@packagedElement.3"/>
+        <ownedAttribute xsi:type="frameweb:NavigationAggregationTarget" type="//@compose.2/components%2FNovoUsuario.1/novo_usuario" association="//@compose.2/components/@packagedElement.4"/>
       </packagedElement>
       <packagedElement xsi:type="frameweb:NavigationAggregationAssociation"/>
       <packagedElement xsi:type="frameweb:NavigationAggregationAssociation"/>
+      <packagedElement xsi:type="frameweb:NavigationAggregationAssociation" memberEnd="//@compose.2/components/@packagedElement.3/@ownedEnd.0 //@compose.2/components/app/@ownedAttribute.1">
+        <ownedEnd xsi:type="frameweb:NavigationAggregationSource" type="//@compose.2/components/app" association="//@compose.2/components/@packagedElement.3"/>
+      </packagedElement>
+      <packagedElement xsi:type="frameweb:NavigationAggregationAssociation" memberEnd="//@compose.2/components/@packagedElement.4/@ownedEnd.0 //@compose.2/components/app/@ownedAttribute.2">
+        <ownedEnd xsi:type="frameweb:NavigationAggregationSource" type="//@compose.2/components/app" association="//@compose.2/components/@packagedElement.4"/>
+      </packagedElement>
     </packagedElement>
     <packagedElement xsi:type="frameweb:ControllerPackage" name="components">
       <packagedElement xsi:type="frameweb:FrontControllerClass" name="AppComponent"/>
