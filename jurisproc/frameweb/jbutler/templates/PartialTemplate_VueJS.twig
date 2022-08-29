@@ -1,23 +1,8 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-
-class '{{ partialProperties.get("partialNameDash") }}' extends React.Component
-{
-
-}
-
-
-
-
-
-{#- Trecho de referência. -#}
-
-
 <template>
    {%- set left = "{{" -%}
    {%- set right = "}}" -%}
 	{#- Define os atributos. -#}
-	{%- for attribute in partial.getgetOwnedAttributes() -%}{%- if not empty(attribute.Name) -%}
+	{%- for attribute in partial.getOwnedAttributes() -%}{%- if not empty(attribute.Name) -%}
 		{%- if attribute.Type.Name == "span" -%}{%- set tag = "span" -%}
 		{%- elseif attribute.Type.Name == "p" -%}{%- set tag = "p" -%}
 		{%- elseif attribute.Type.Name == "h1" -%}{%- set tag = "h1" -%}
