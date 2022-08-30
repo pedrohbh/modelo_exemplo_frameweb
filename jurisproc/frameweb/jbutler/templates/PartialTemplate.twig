@@ -21,6 +21,13 @@ class {{ partialProperties.get("partialName") }} extends React.Component
 		{%- if loop.last == true -%}}{% endif %}{% endfor %}		
 	}
 
+	{% for method in partialProperties.get("methodsController") %}
+	{{ method.Name }}({% for parameter in method.OwnedParameters %}{{ parameter.Type.Name }} {{ parameter.Name }}{% if loop.last == false %}, {% endif %}{% endfor %}) 
+	{
+		//TODO To be implemented
+	},
+	{% endfor %}
+
 	render() {  
       return (
         <div>
