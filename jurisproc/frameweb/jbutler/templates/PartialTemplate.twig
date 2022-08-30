@@ -51,6 +51,9 @@ class {{ partialProperties.get("partialName") }} extends React.Component
 	{% endif %}
 	{#- Define o formulário. -#}
    {% for form in forms %}
+   {% if loop.first == true %}
+   <form>
+   {%- endif -%}
         {%- for relationship in form.getSourceDirectedRelationships() -%}
         	{%- for obj in relationship.getSuppliers() -%}
         		{%- if obj.getPageTagLib is not defined -%}
@@ -64,6 +67,9 @@ class {{ partialProperties.get("partialName") }} extends React.Component
 			{%- else -%}{%- set tag = "nao_definido" -%}{%- endif -%}
 			<{{ tag }} id="{{ attribute.Name }}" v-model="{{ left }} {{ attribute.Name }} {{ right }}" />
 		{% endfor %}
+	{%- if loop.last == true -%}
+	</form>
+	{%- endif -%}
     {% endfor %}
 	{% if partialProperties.get("hasMethodForm") %}
 	{% for metodoInvocado in partialProperties.get("invocatedMethodsNames") %}
