@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-class '{{ partialProperties.get("partialNameDash") }}' extends React.Component
+class '{{ partialProperties.get("partialName") }}' extends React.Component
 {
 	constructor(props)
 	{
@@ -27,14 +27,14 @@ class '{{ partialProperties.get("partialNameDash") }}' extends React.Component
 		{%- set left = "{{" -%}
    		{%- set right = "}}" -%}
 		{#- Define os atributos. -#}
-		{%- for attribute in partial.getgetOwnedAttributes() -%}{%- if not empty(attribute.Name) -%}
+		{%- for attribute in partial.getOwnedAttributes() -%}{%- if not empty(attribute.Name) -%}
 			{%- if attribute.Type.Name == "span" -%}{%- set tag = "span" -%}
 			{%- elseif attribute.Type.Name == "p" -%}{%- set tag = "p" -%}
 			{%- elseif attribute.Type.Name == "h1" -%}{%- set tag = "h1" -%}
 			{%- elseif attribute.Type.Name == "outputText" -%}{%- set tag = "h:outputText" -%}
 			{%- elseif attribute.Type.Name == "panelGroup" -%}{%- set tag = "h:panelGroup" -%}
 			{%- elseif attribute.Type.Name == "selectManyListbox" -%}{%- set tag = "h:selectManyListbox" -%}
-			{%- else -%}{%- set tag = "<p>" -%}{%- endif -%}
+			{%- else -%}{%- set tag = "p" -%}{%- endif -%}
 				<{{ tag }} id="{{ attribute.Name }}">{{ left }} {{ attribute.Name }} {{ right }}</{{ tag }}>
 			{%- endif -%}{%- endfor -%}
 	{% if partialProperties.get("hasMethod") %}

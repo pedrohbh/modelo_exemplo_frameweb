@@ -49,7 +49,7 @@
       <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_o7wBUoBtEeuTeq2d20D-mA" name="Method Diagram" repPath="#_o7vaQIBtEeuTeq2d20D-mA" changeId="c486fcd5-ae28-40f5-b02c-7f1662fc2510">
         <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/br.ufes.inf.nemo.FrameWeb_Martins2015.design/description/FrameWeb.odesign#//@ownedViewpoints[name='']/@ownedRepresentations[name='Method%20Diagram']"/>
       </ownedRepresentationDescriptors>
-      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_LYRDYYBvEeuTeq2d20D-mA" name="FrameWebNavigationModel" repPath="#_LYPOMIBvEeuTeq2d20D-mA" changeId="51e2ca89-85f9-478c-b330-8f5516d2ec2c">
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_LYRDYYBvEeuTeq2d20D-mA" name="FrameWebNavigationModel" repPath="#_LYPOMIBvEeuTeq2d20D-mA" changeId="b08c43e4-9242-4156-a29b-1b4f1dbbc5ac">
         <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/br.ufes.inf.nemo.FrameWeb_Martins2015.design/description/FrameWeb.odesign#//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebNavigationModel']"/>
         <target xmi:type="frameweb:NavigationModel" href="Model.frameweb#//@compose.2"/>
       </ownedRepresentationDescriptors>
@@ -4270,7 +4270,7 @@
           </ownedStyle>
           <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/br.ufes.inf.nemo.FrameWeb_Martins2015.design/description/FrameWeb.odesign#//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebNavigationModel']/@defaultLayer/@containerMappings[name='View%20Package']/@subContainerMappings[name='Partial%20Node']/@subNodeMappings[name='UI%20Component%20Field%20Node']"/>
         </ownedElements>
-        <ownedElements xmi:type="diagram:DNodeListElement" uid="_mQfRABeMEe2GM-5GOd4ZNA" name=" + titulo_marcado : radioButton">
+        <ownedElements xmi:type="diagram:DNodeListElement" uid="_mQfRABeMEe2GM-5GOd4ZNA" name=" + titulo_marcado : p">
           <target xmi:type="frameweb:UIComponentField" href="Model.frameweb#//@compose.2/components%2FNovoUsuario.1/novo_usuario/titulo_marcado"/>
           <semanticElements xmi:type="frameweb:UIComponentField" href="Model.frameweb#//@compose.2/components%2FNovoUsuario.1/novo_usuario/titulo_marcado"/>
           <ownedStyle xmi:type="diagram:Dot" uid="_mQiUUBeMEe2GM-5GOd4ZNA" showIcon="false" labelAlignment="LEFT" labelPosition="node">
