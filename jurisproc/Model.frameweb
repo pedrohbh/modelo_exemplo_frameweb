@@ -586,7 +586,7 @@
           <type xsi:type="frameweb:Tag" href="frameweb/jbutler/NavigationModel_JButler_JSF_PrimeFaces.frameweb#//@configures.0/HTML/input%5Btext%5D"/>
         </ownedAttribute>
         <ownedAttribute xsi:type="frameweb:UIComponentField" name="usuario.sexo">
-          <type xsi:type="frameweb:Tag" href="frameweb/jbutler/NavigationModel_JButler_JSF_PrimeFaces.frameweb#//@configures.0/PrimeFaces/radioButton"/>
+          <type xsi:type="frameweb:Tag" href="frameweb/jbutler/NavigationModel_JButler_JSF_PrimeFaces.frameweb#//@configures.0/HTML/input%5Btext%5D"/>
         </ownedAttribute>
       </packagedElement>
       <packagedElement xsi:type="frameweb:NavigationAssociation" memberEnd="//@compose.2/components%2FNovoUsuario.1/@packagedElement.2/@ownedEnd.0 //@compose.2/components%2FNovoUsuario.1/novo_usuario/@ownedAttribute.4">

@@ -65,17 +65,18 @@ class {{ partialProperties.get("partialName") }} extends React.Component
 			{%- if attribute.Type.Name == "input[text]" -%}{%- set tag = 'input type="text"' -%}
 			{%- elseif attribute.Type.Name == "outputLink" -%}{%- set tag = "h:outputLink" -%}
 			{%- else -%}{%- set tag = "nao_definido" -%}{%- endif -%}
-			<{{ tag }} id="{{ attribute.Name }}" v-model="{{ left }} {{ attribute.Name }} {{ right }}" />
+			<{{ tag }} id="{{ attribute.Name }}" value={{ left }} this.state.{{ attribute.Name }} {{ right }} />
 		{% endfor %}
-	{%- if loop.last == true -%}
-	</form>
-	{%- endif -%}
-    {% endfor %}
 	{% if partialProperties.get("hasMethodForm") %}
 	{% for metodoInvocado in partialProperties.get("invocatedMethodsNames") %}
 	<button onClick="{{metodoInvocado}}">{{metodoInvocado}}</button>
 	{% endfor %}
 	{% endif %}
+	{%- if loop.last == true -%}
+	</form>
+	{%- endif -%}
+    {% endfor %}
+	
     {#- Define os partials referenciados. -#}
 	{%- set possuiReferenciaPartial = false -%}
 	{% for refPartial in referencedPartials %}
