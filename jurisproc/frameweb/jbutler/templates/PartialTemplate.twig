@@ -64,7 +64,7 @@ class {{ partialProperties.get("partialName") }} extends React.Component
 		{% for attribute in form.Attributes %}
 			{%- if attribute.Type.Name == "input[text]" -%}{%- set tag = 'input type="text"' -%}
 			{%- elseif attribute.Type.Name == "outputLink" -%}{%- set tag = "h:outputLink" -%}
-			{%- else -%}{%- set tag = "nao_definido" -%}{%- endif -%}
+			{%- else -%}{%- set tag = "attribute.Type.Name" -%}{%- endif -%}
 			<{{ tag }} id="{{ attribute.Name }}" value={{ left }} this.state.{{ attribute.Name }} {{ right }} />
 		{% endfor %}
 	{% if partialProperties.get("hasMethodForm") %}
@@ -82,7 +82,7 @@ class {{ partialProperties.get("partialName") }} extends React.Component
 	{% for refPartial in referencedPartials %}
 	{%- set possuiReferenciaPartial = true -%}
 	{% if refPartial.UpperBound == 1 %}
-	<{{ refPartial.NameDash }} />
+	<{{ refPartial.NameDash }} {% for spaAttribute in refPartial.SpaPropsAttributes %}{{spaAttribute.Name}}="" {% endfor %}/>
 	{% elseif refPartial.UpperBound < 0 %}
 	<{{refPartial.NameDash}} v-for="(nota, ch) in notas" :key="ch" :nota="nota" />
 	{% else %}
