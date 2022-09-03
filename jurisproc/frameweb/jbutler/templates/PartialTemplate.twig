@@ -1,6 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-
+{% if partialProperties.get("FrontControllerClass").getAttributes().getLenght() == 0 %}
+export default function {{ partialProperties.get("partialName") }}(props) {
+{% else %}
 class {{ partialProperties.get("partialName") }} extends React.Component
 {
 	constructor(props)
@@ -19,14 +21,14 @@ class {{ partialProperties.get("partialName") }} extends React.Component
 		{{ attribute.Name }} : {{ atributoTipo }}{% if loop.last == false %}, {% endif %}
 		{%- if loop.last == true -%}}{% endif %}{% endfor %}		
 	}
-
+{% endif %}
 	{% for method in partialProperties.get("methodsController") %}
 	{{ method.Name }}({% for parameter in method.OwnedParameters %}{{ parameter.Type.Name }} {{ parameter.Name }}{% if loop.last == false %}, {% endif %}{% endfor %}) 
 	{
 		//TODO To be implemented
 	},
 	{% endfor %}
-
+	
 	render() {  
       return (
         <div>
