@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: '{{ partialProperties.get("partialNameDash") }}',
@@ -68,9 +68,13 @@ import { Component } from '@angular/core';
 	{#- Fim de partials referenciados. -#}
   `
 })
-export class {{ partialProperties.get("partialName") }}
+export class {{ partialProperties.get("partialName") }} implements OnInit
 {
-  // The code in this class drives the component's behavior.
+  constructor() { }
+
+  ngOnInit(): void 
+  {
+  }
 }
 
 
