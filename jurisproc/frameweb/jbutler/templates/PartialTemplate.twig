@@ -90,6 +90,15 @@ export class {{ partialProperties.get("partialName") }} implements OnInit
   ngOnInit(): void 
   {
   }
+
+  {#- Parte dos métodos. -#}
+  {% for method in partialProperties.get("methodsController") %}
+	{{ method.Name }}({% for parameter in method.OwnedParameters %}{{ parameter.Type.Name }} {{ parameter.Name }}{% if loop.last == false %}, {% endif %}{% endfor %}) 
+	{
+		//TODO To be implemented
+	},
+    {% endfor %}
+   {#- Fim da parte dos métodos. -#}
 }
 
 
