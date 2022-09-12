@@ -18,7 +18,7 @@ import { Component, OnInit } from '@angular/core';
 			{%- endif -%}{%- endfor -%}
 	{% if partialProperties.get("hasMethod") %}
 	{% for metodoInvocado in partialProperties.get("invocatedMethodsNames") %}
-	<button onClick="{{metodoInvocado}}">{{metodoInvocado}}</button>
+	<button (click)="{{metodoInvocado}}">{{metodoInvocado}}</button>
 	{% endfor %}
 	{% endif %}
 
@@ -42,7 +42,7 @@ import { Component, OnInit } from '@angular/core';
 		{% endfor %}
 	{% if partialProperties.get("hasMethodForm") %}
 	{% for metodoInvocado in partialProperties.get("invocatedMethodsNames") %}
-	<button onClick="{{metodoInvocado}}">{{metodoInvocado}}</button>
+	<button (click)="{{metodoInvocado}}">{{metodoInvocado}}</button>
 	{% endfor %}
 	{% endif %}
 	{%- if loop.last == true -%}
