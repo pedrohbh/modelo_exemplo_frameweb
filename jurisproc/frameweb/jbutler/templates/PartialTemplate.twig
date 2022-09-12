@@ -21,6 +21,51 @@ import { Component } from '@angular/core';
 	<button onClick="{{metodoInvocado}}">{{metodoInvocado}}</button>
 	{% endfor %}
 	{% endif %}
+
+	{#- Define o formulário. -#}
+   {% for form in forms %}
+   {% if loop.first == true %}
+   <form>
+   {% endif %}
+        {%- for relationship in form.getSourceDirectedRelationships() -%}
+        	{%- for obj in relationship.getSuppliers() -%}
+        		{%- if obj.getPageTagLib is not defined -%}
+    			    {%- set controllerName = lower_first(obj.getName()) -%}
+        		{%- endif -%}
+        	{%- endfor -%}
+        {%- endfor -%}
+		{% for attribute in form.Attributes %}
+			{%- if attribute.Type.Name == "input[text]" -%}{%- set tag = 'input type="text"' -%}
+			{%- elseif attribute.Type.Name == "outputLink" -%}{%- set tag = "h:outputLink" -%}
+			{%- else -%}{%- set tag = "attribute.Type.Name" -%}{%- endif -%}
+			<{{ tag }} id="{{ attribute.Name }}" value={{ left }} this.state.{{ attribute.Name }} {{ right }} />
+		{% endfor %}
+	{% if partialProperties.get("hasMethodForm") %}
+	{% for metodoInvocado in partialProperties.get("invocatedMethodsNames") %}
+	<button onClick="{{metodoInvocado}}">{{metodoInvocado}}</button>
+	{% endfor %}
+	{% endif %}
+	{%- if loop.last == true -%}
+	</form>
+	{%- endif -%}
+    {% endfor %}
+	{#- Fim do formulário. -#}
+
+	 {#- Define os partials referenciados. -#}
+	{%- set possuiReferenciaPartial = false -%}
+	{% for refPartial in referencedPartials %}
+	{%- set possuiReferenciaPartial = true -%}
+	{% if refPartial.UpperBound == 1 %}
+	<{{ refPartial.NameDash }} {% for spaAttribute in refPartial.SpaPropsAttributes %}{{spaAttribute.Name}}="" {% endfor %}/>
+	{% elseif refPartial.UpperBound < 0 %}
+	<{{refPartial.NameDash}} v-for="(nota, ch) in notas" :key="ch" :nota="nota" />
+	{% else %}
+		{% for i in [1..refPartial.UpperBound] %}
+		<{{ refPartial.NameDash }} />
+		{% endfor %}
+	{% endif %}
+	{%- endfor -%}
+	{#- Fim de partials referenciados. -#}
   `
 })
 export class {{ partialProperties.get("partialName") }}
