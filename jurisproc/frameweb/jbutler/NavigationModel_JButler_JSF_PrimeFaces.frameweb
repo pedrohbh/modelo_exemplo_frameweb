@@ -188,6 +188,9 @@
       <packagedElement xsi:type="frameweb:Tag" name="input type=&quot;file&quot;"/>
       <packagedElement xsi:type="frameweb:Tag" name="input type=&quot;text&quot;"/>
       <packagedElement xsi:type="frameweb:Tag" name="input type=&quot;color&quot;"/>
+      <packagedElement xsi:type="frameweb:Tag" name="a"/>
+      <packagedElement xsi:type="frameweb:Tag" name="img"/>
+      <packagedElement xsi:type="frameweb:Tag" name="div"/>
     </packagedElement>
   </configures>
 </frameweb:FramewebProject>
