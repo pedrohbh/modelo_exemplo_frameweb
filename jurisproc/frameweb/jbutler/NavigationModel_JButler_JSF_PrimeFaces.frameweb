@@ -191,6 +191,10 @@
       <packagedElement xsi:type="frameweb:Tag" name="a"/>
       <packagedElement xsi:type="frameweb:Tag" name="img"/>
       <packagedElement xsi:type="frameweb:Tag" name="div"/>
+      <packagedElement xsi:type="frameweb:Tag" name="h2"/>
+      <packagedElement xsi:type="frameweb:Tag" name="h3"/>
+      <packagedElement xsi:type="frameweb:Tag" name="h4"/>
+      <packagedElement xsi:type="frameweb:Tag" name="h5"/>
     </packagedElement>
   </configures>
 </frameweb:FramewebProject>
