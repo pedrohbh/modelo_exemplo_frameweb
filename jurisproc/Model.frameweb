@@ -466,6 +466,12 @@
         <ownedAttribute xsi:type="frameweb:NavigationCompositionWhole" type="//@compose.2/app%2Fcompoents%2Fadmin%2Ffuncionario/funcionrioForm"/>
         <ownedAttribute xsi:type="frameweb:NavigationAggregationSource" type="//@compose.2/app%2Fcomponents%2Fadmin%2Fmenu/menu"/>
         <ownedAttribute xsi:type="frameweb:NavigationCompositionWhole" type="//@compose.2/app%2Fcompoents%2Fadmin%2Ffuncionario/funcionrioForm" association="//@compose.2/app%2Fcompoents%2Fadmin%2Ffuncionario/@packagedElement.4"/>
+        <ownedAttribute xsi:type="frameweb:UIComponentField" name="titulo">
+          <type xsi:type="frameweb:Tag" href="frameweb/jbutler/NavigationModel_JButler_JSF_PrimeFaces.frameweb#//@configures.0/HTML/h1"/>
+        </ownedAttribute>
+        <ownedAttribute xsi:type="frameweb:UIComponentField" name="descricao">
+          <type xsi:type="frameweb:Tag" href="frameweb/jbutler/NavigationModel_JButler_JSF_PrimeFaces.frameweb#//@configures.0/HTML/p"/>
+        </ownedAttribute>
       </packagedElement>
       <packagedElement xsi:type="frameweb:UIComponent" name="funcionrioForm">
         <ownedAttribute xsi:type="frameweb:UIComponentField" name="funionario.nome">

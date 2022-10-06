@@ -71,10 +71,7 @@ import { Component, OnInit } from '@angular/core';
 export class {{ partialProperties.get("partialName") }} implements OnInit
 {
 	{#- Fim de partials referenciados. -#}
-	{% for attribute in partialProperties.get("FrontControllerClass").getAttributes() %}
-		{%- if loop.first == true -%}
-		this.state = {
-		{%- endif -%}			
+	{% for attribute in partialProperties.get("FrontControllerClass").getAttributes() %}			
 		{%- set atributoTipo = "\"\"" -%}
 		{#- attribute.Type.Name -#}
 		{%- if attribute.Type.Name == "string" or attribute.Type.Name == "String" -%}{%- set atributoTipo = "\"\"" -%}
